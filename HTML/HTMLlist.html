@@ -9,8 +9,8 @@
     <article>
         <h2>Ordered List</h2>
         <h3>Hot Drinks</h3>
-        <ol>
-            <li>Tea</li>  <!-- type : 1-->
+        <ol style="border: 1px solid yellow;">
+            <li style="border: 1px solid darkblue;">Tea</li>  <!-- type : 1-->
             <li>Coffee</li>  
         </ol>
         <ol type="A">  <!-- type A, a, I, i-->
@@ -27,12 +27,11 @@
             <li>Coffee</li> 
         </ol>
         <ol reversed>
-            <li>Tea</li>  <!-- type="disc"-->
+            <li>Tea</li>  
             <li>Coffee</li>  
-            <li>Coffee</li> 
-            <li>Coffee</li> 
-            <li>Coffee</li> 
-            <li>Coffee</li> 
+            <li>Milk</li> 
+            <li>Lemon Tea</li> 
+            <li>Hot Chocolate</li> 
         </ol>
         <ol start="4" type="A" reversed>
             <li>Tea</li>  <!-- type : 1-->
@@ -55,12 +54,60 @@
         <ul type="circle"> <!-- type disc, circle, square-->
             <li>Tea</li>  <!-- type="disc"-->
             <li>Coffee</li>  
+            <li><a href="">tea</a></li>
         </ul>
         <menu> <!-- type disc, circle, square-->
             <li>Tea</li>  <!-- type="disc"-->
             <li>Coffee</li>  
         </menu>
     </article>
-   
+   <article>
+    <h2>Definition List</h2>
+    <dl>
+        <dt style="background-color: yellow;">HTML</dt>
+        <dd>HTML is Hypertest Markup Language</dd>
+        <dd>HTML contains tag to represent content on the web page</dd>
+        <dt>CSS</dt>
+        <dd>CSS is Cascaded style sheets to apply look and feel to a web page</dd>
+    </dl>
+   </article>
+   <hr>
+   <!-- ol, ul  : children allower are: li, script, template
+    dl : children allowed are :dt and dd-->
+   <h4>Assignment (right nesting)</h4>
+   <ol>
+        <li>Java
+            <ul>
+                <li>Core Java</li>
+                <li>Advanced Java</li>
+                <li>Framework
+                    <ul>
+                    <li>Spring</li>
+                    <li>Libenate</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li> Python</li>
+        <li> c#</li>
+    </ol>
+    <h4>Assignment (wrong nesting)</h4>
+    <ol>
+        <li>Java</li>
+        <ul>
+            <li>Core Java</li>
+            <li>Advanced Java</li>
+            <li>Framework</li>
+            <ul>
+                <li>Spring</li>
+                <li>Libenate</li>
+            </ul>
+        </ul>
+        <li> Python</li>
+        <li> c#</li>
+    </ol>
+
+
+        
 </body>
 </html>
