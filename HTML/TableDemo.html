@@ -4,10 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Table Demo</title>
+    <style>
+          table, th, td{
+            border: 1px solid green;
+            border-collapse: collapse;
+            padding: 10px;
+            width: 50%;
+          }  
+    </style>
 </head>
 <body>
     <!-- table block element but except : width till contents only-->
-    <table border="2"> <!-- alternate to border attribute is CSS-->
+    <table> <!-- alternate to border attribute is CSS-->
         <caption>Employee Details</caption>
         <thead>
             <tr><th>ID</th> <th colspan="2">NAME</th><th>SALARY</th><th>EXPERIENCE</th></tr>
@@ -20,7 +28,7 @@
             <tr><td>111</td><td>Ayush</td><td>Patil</td><td>12</td></tr>
         </tbody>
         <tfoot>
-
+           <tr><td colspan="5"> all the employees from Neosoft</td></tr>
         </tfoot>
     </table>
    
