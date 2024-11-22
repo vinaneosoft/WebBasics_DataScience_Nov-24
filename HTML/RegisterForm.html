@@ -6,15 +6,15 @@
     <title>Registration Form</title>
 </head>
 <body>
-    <form>
-        <input name="employeename" id="fname" placeholder="first name" /> <!-- type="text"-->
-        <input name="employeename"  title="last name" type=""><br><br>
-        <label for="mobile">Enter mobile number</label><input type="tel" id="mobile"><br><br>
-        <input type="number" placeholder="Enter age" value="22"><br><br>
-        <input type="email" placeholder="enter email id"><br><br>
-        <label for="joindate">Enter joining date</label><input type="datetime-local" id="joindate"><br><br>
+    <form >
+        <input name="employeename" id="fname" placeholder="first name" required /> <!-- type="text"-->
+        <input name="employeename"  title="last name" type="" required><br><br>
+        <label for="mobile">Enter mobile number</label><input type="tel" id="mobile" required><br><br>
+        <input type="number" placeholder="Enter age" value="22" required><br><br>
+        <input type="email" placeholder="enter email id" required><br><br>
+        <label for="joindate">Enter joining date</label><input type="date" id="joindate"><br><br>
         <label>Select Courses to Learn</label>
-        <input type="checkbox" name="technicalcourses" id="course1" value="webbasics"><label for="course1">Web Basics</label>
+        <input checked required type="checkbox" name="technicalcourses" id="course1" value="webbasics"><label for="course1">Web Basics</label>
         <input type="checkbox" name="technicalcourses" id="course2" value="angular"><label for="course2">Angular</label>
         <input type="checkbox" name="technicalcourses" id="course3" value="react"><label for="course3">React</label>
         <br><br>
@@ -22,10 +22,10 @@
         <input type="radio" name="gender" id="gender1" value="male"><label for="gender1">MALE</label>
         <input type="radio" name="gender"  id="gender2" value="female"><label for="gender2">FEMALE</label> <br><br>
         <label for="department">Select Department</label>
-        <select id="department">
+        <select id="department" required>
             <option value="ld">Learning and Development</option>
             <option value="php">PHP</option>
-            <option value="js">Javascript</option>
+            <option value="js"> Javascript</option>
             <option value="js">Data Science</option>
         </select><br><br>
         <textarea id="comments" cols="50" placeholder="add extra comments (optional)"></textarea>
