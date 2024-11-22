@@ -6,8 +6,20 @@
     <title>Registration Form</title>
 </head>
 <body>
-    <input placeholder="first name" /> <!-- type="text"-->
-    <input title="last name" type="text">
-    <label for="mobile">Enter mobile number</label><input type="tel" id="mobile">
+    <input name="employeename" id="fname" placeholder="first name" /> <!-- type="text"-->
+    <input name="employeename"  title="last name" type="text"><br><br>
+    <label for="mobile">Enter mobile number</label><input type="tel" id="mobile"><br><br>
+    <input type="number" placeholder="Enter age" value="22"><br><br>
+    <input type="email" placeholder="enter email id"><br><br>
+    <label>Select Courses to Learn</label>
+    <input type="checkbox" name="technicalcourses" id="course1" value="webbasics"><label for="course1">Web Basics</label>
+    <input type="checkbox" name="technicalcourses" id="course2" value="angular"><label for="course2">Angular</label>
+    <input type="checkbox" name="technicalcourses" id="course3" value="react"><label for="course3">React</label>
+    <br><br>
+    <label>Select Gender</label>
+    <input type="radio" name="gender" id="gender1" value="male"><label for="gender1">MALE</label>
+    <input type="radio" name="gender"  id="gender2" value="female"><label for="gender2">FEMALE</label>
 </body>
+<!-- we will extract value of every field in javascript
+ getElementById, getElementsByName-->
 </html>
