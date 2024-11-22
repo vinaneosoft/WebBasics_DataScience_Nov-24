@@ -6,7 +6,6 @@
     <title>Media Demo</title>
 </head>
 <body>
-    
     <article>
         <h2>Sample Audio to test</h2>
         <audio src="./Media/sampleaudio.mp3" loop autoplay muted controls></audio> <!-- muted-->
@@ -18,6 +17,26 @@
         </audio>
         <!-- It does not represent anything on its own. below code will not work-->
         <source src="./Media/sampleaudio.mp3" type="audio/mp3">
+
+      <!--   <object data="" type=""></object>
+        <embed src="" type=""> -->
+
+        <iframe frameborder="0"></iframe>
+        <iframe title="sampleaudio" src="./Media/sampleaudio.mp3"></iframe>
+        <iframe title="samplevideo" src="./Media/big_buck_bunny_720p_1mb.mp4"></iframe>
+        <iframe title="sampleimage" width="500" src="./Images/Girl-singing-with-mic.jpg"></iframe>
+        <iframe title="sampledocument" src="./Media/sample-1.pdf"></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/SM2LK5AMhyk?si=OthMK7CbeorqiRbp" 
+        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe src="https://youtu.be/SM2LK5AMhyk?si=ZlQ6K3KD1m1h_K3U"></iframe>
+        <iframe src="https://getsamplefiles.com/sample-document-files/pdf#google_vignette"></iframe>
+        <iframe src="./DivPdemo.html"></iframe>
+        <!-- why not working? 
+         image in iframe : can we controi height and w of image?-->
+        <!-- <iframe>
+            <source src="./Images/Girl-singing-with-mic.jpg">
+        </iframe> -->
     </article>
 </body>
 </html>
