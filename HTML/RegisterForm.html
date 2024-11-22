@@ -7,10 +7,10 @@
 </head>
 <body>
     <form >
-        <input name="employeename" id="fname" placeholder="first name" required /> <!-- type="text"-->
+        <input name="employeename" id="fname" pattern="[A-Za-z ]*" placeholder="first name" required /> <!-- type="text"-->
         <input name="employeename"  title="last name" type="" required><br><br>
-        <label for="mobile">Enter mobile number</label><input type="tel" id="mobile" required><br><br>
-        <input type="number" placeholder="Enter age" value="22" required><br><br>
+        <label for="mobile">Enter mobile number</label><input type="tel" pattern="[0-9]*"  minlength="10" maxlength="10" id="mobile" required><br><br>
+        <input type="number" placeholder="Enter age" min="20" max="40" title="employee having age between 20 to 40 are allowed" value="22" required><br><br>
         <input type="email" placeholder="enter email id" required><br><br>
         <label for="joindate">Enter joining date</label><input type="date" id="joindate"><br><br>
         <label>Select Courses to Learn</label>
@@ -29,6 +29,7 @@
             <option value="js">Data Science</option>
         </select><br><br>
         <textarea id="comments" cols="50" placeholder="add extra comments (optional)"></textarea>
+        <input type="text" placeholder="set new password" title="Password must have atleast one small letter, capital letter, digit, symbol()" required pattern="(?=.*\d.*)(?=.*[a-zA-Z].*)(?=.*[@!#\$%&\?].*).{5,10}">
         <input type="hidden" name="hiddenfield" value="courseregistration"><br><br>
         <input type="submit" value="ENROLL"> <input type="reset">
     </form>
