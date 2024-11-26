@@ -7,7 +7,7 @@
     <style>
         canvas{
             border: 2px solid;
-            width: 50%;
+            width:500px;
             height: 500px;
         }
     </style>
@@ -17,11 +17,14 @@
     <script>
         let canvasArea=document.getElementById("drawing");
         let ct=canvasArea.getContext("2d");
-        ct.strokeRect(0,50, 50, 50);
+         ct.strokeRect(0,50, 50, 50);
         ct.fillStyle="red"
         ct.fillRect(10,10,90,50); // line height of x co ordinate and y co ordinate
         ct.moveTo(120,20);
         ct.lineTo(100,80);
+        ct.stroke(); 
+        ct.beginPath();
+        ct.arc(200,100,20, 0, 2 * Math.PI);
         ct.stroke();
     </script>
 </body>
