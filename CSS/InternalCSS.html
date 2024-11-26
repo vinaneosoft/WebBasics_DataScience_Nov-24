@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meter</title>
+    <style>
+        meter{
+            width: 300px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <label>Fuel Indicator (in ltr)</label>
+    <meter id="fuel" min="0" low="300" optimum="900"  value="0" high="800" max="1000"></meter>
+    <meter id="fuel" min="0" low="300" optimum="900"  value="0" high="800" max="1000"></meter>
+    <button onclick="fill()">FILL FUEL</button>
+    <!-- if optimum is in the range of min to low then lower units are safer and 
+     higher are danger
+    0 to low safer, above low to high warning , above high danger-->
+    <!-- if optimum is in the range of high to max then higher units are safer and 
+     lower are danger
+    0 to low safer, above low to high warning , above high danger
+    o to below low : danger,
+    low to below high: warning
+    high to max : safe-->
+    <script>
+        function fill(){
+            let counter=0;
+            let interval=setInterval(()=>{
+                counter++;
+                console.log(counter);
+                document.getElementById("fuel").value=counter;
+                if(counter==1000)
+                    clearInterval(interval);
+            },50)
+        }
+    </script>
+</body>
+</html>

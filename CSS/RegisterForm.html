@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <form >
+        <input name="employeename" id="fname" pattern="[A-Za-z ]*" placeholder="first name" required /> <!-- type="text"-->
+        <input name="employeename"  title="last name" type="" required><br><br>
+        <label for="mobile">Enter mobile number</label><input type="tel" pattern="[0-9]*"  minlength="10" maxlength="10" id="mobile" required><br><br>
+        <input type="number" placeholder="Enter age" min="20" max="40" title="employee having age between 20 to 40 are allowed" value="22" required><br><br>
+        <input type="email" placeholder="enter email id" required><br><br>
+        <label for="joindate">Enter joining date</label><input type="date" id="joindate"><br><br>
+        <label>Select Courses to Learn</label>
+        <input checked required type="checkbox" name="technicalcourses" id="course1" value="webbasics"><label for="course1">Web Basics</label>
+        <input type="checkbox" name="technicalcourses" id="course2" value="angular"><label for="course2">Angular</label>
+        <input type="checkbox" name="technicalcourses" id="course3" value="react"><label for="course3">React</label>
+        <br><br>
+        <label>Select Gender</label>
+        <input type="radio" name="gender" id="gender1" value="male"><label for="gender1">MALE</label>
+        <input type="radio" name="gender"  id="gender2" value="female"><label for="gender2">FEMALE</label> <br><br>
+        <label for="department">Select Department</label>
+        <select id="department" required>
+            <option value="ld">Learning and Development</option>
+            <option value="php">PHP</option>
+            <option value="js"> Javascript</option>
+            <option value="js">Data Science</option>
+        </select><br><br>
+        <textarea id="comments" cols="50" placeholder="add extra comments (optional)"></textarea>
+        <input type="text" placeholder="set new password" title="Password must have atleast one small letter, capital letter, digit, symbol()" required pattern="(?=.*\d.*)(?=.*[a-zA-Z].*)(?=.*[@!#\$%&\?].*).{5,10}">
+        <input type="hidden" name="hiddenfield" value="courseregistration"><br><br>
+        <datalist id="flavors">
+            <option>Vanilla</option>
+            <option>Mango</option>
+            <option>Coconut</option>
+            <option>ButterScotch</option>
+        </datalist>
+        <datalist id="flavors2">
+            <option value="vn">Vanilla</option>
+            <option value="mn">Mango</option>
+            <option>Coconut</option>
+            <option>ButterScotch</option>
+        </datalist>
+        <input list="flavors2" placeholder="select flavor from list"><br><br>
+        <datalist id="tickets">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+        </datalist>
+        <h4>UTS Online Ticket Generartion</h4>
+        <label for="count">Select adults</label>
+        <input type="number" list="tickets" id="count">
+        <br><br>
+        <input type="submit" value="ENROLL"> <input type="reset">
+    </form>
+    <!-- month, week, color, url, range, hidden-->
+</body>
+<!-- we will extract value of every field in javascript
+ getElementById, getElementsByName
+ we will put dnames in array, sort the array, we will put all departments in option tag using loop-->
+</html>

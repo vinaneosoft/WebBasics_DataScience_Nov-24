@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datalist Demo</title>
+</head>
+<body>
+    <datalist id="flavors">
+        <option>Vanilla</option>
+        <option>Mango</option>
+        <option>Coconut</option>
+        <option>ButterScotch</option>
+    </datalist>
+    <datalist id="flavors2">
+        <option value="vn">Vanilla</option>
+        <option value="mn">Mango</option>
+        <option>Coconut</option>
+        <option>ButterScotch</option>
+    </datalist>
+    <input list="flavors2" placeholder="select flavor from list"><br><br>
+    <datalist id="tickets">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+    </datalist>
+    <h4>UTS Online Ticket Generartion</h4>
+    <label for="count">Select adults</label>
+    <input type="number" list="tickets" id="count">
+</body>
+</html>
