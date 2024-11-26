@@ -4,11 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
+    <style>
+        /* colored border for all textfield */
+        [type='text']{
+            border: 4px double blue;
+        }
+        /*set height and width to checkboxes using attribute selector*/
+        [type='checkbox']{
+        height: 30px;
+        width: 30px;
+        }
+        /*how will u select id as attribute selector*/
+        [id='fname']{
+            background-color: yellow;
+        }
+        /*make submit button rounded using border-radius*/ 
+        [type='submit']{
+            border-radius: 10px;
+        }
+          /*make input submit button rounded using border-radius*/ 
+        input[type='submit']{
+            border-radius: 10px;
+        }
+        /**/
+    </style>
 </head>
 <body>
     <form >
-        <input name="employeename" id="fname" pattern="[A-Za-z ]*" placeholder="first name" required /> <!-- type="text"-->
-        <input name="employeename"  title="last name" type="" required><br><br>
+        <input name="employeename"  id="fname" pattern="[A-Za-z ]*" placeholder="first name" required /> <!-- type="text"-->
+        <input name="employeename"  title="middle name" type="text" required><br><br>
+        <input name="employeename"  title="last name" type="text" required><br><br>
         <label for="mobile">Enter mobile number</label><input type="tel" pattern="[0-9]*"  minlength="10" maxlength="10" id="mobile" required><br><br>
         <input type="number" placeholder="Enter age" min="20" max="40" title="employee having age between 20 to 40 are allowed" value="22" required><br><br>
         <input type="email" placeholder="enter email id" required><br><br>
@@ -29,7 +54,7 @@
             <option value="js">Data Science</option>
         </select><br><br>
         <textarea id="comments" cols="50" placeholder="add extra comments (optional)"></textarea>
-        <input type="text" placeholder="set new password" title="Password must have atleast one small letter, capital letter, digit, symbol()" required pattern="(?=.*\d.*)(?=.*[a-zA-Z].*)(?=.*[@!#\$%&\?].*).{5,10}">
+        <input type="password" placeholder="set new password" title="Password must have atleast one small letter, capital letter, digit, symbol()" required pattern="(?=.*\d.*)(?=.*[a-zA-Z].*)(?=.*[@!#\$%&\?].*).{5,10}">
         <input type="hidden" name="hiddenfield" value="courseregistration"><br><br>
         <datalist id="flavors">
             <option>Vanilla</option>
@@ -54,7 +79,9 @@
         <label for="count">Select adults</label>
         <input type="number" list="tickets" id="count">
         <br><br>
-        <input type="submit" value="ENROLL"> <input type="reset">
+        <input type="submit" value="ENROLL"> 
+        <button type="submit">ENROLL</button> 
+        <input type="reset">
     </form>
     <!-- month, week, color, url, range, hidden-->
 </body>
