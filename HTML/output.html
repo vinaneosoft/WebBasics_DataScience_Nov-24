@@ -39,19 +39,20 @@
     </section>
     <hr>
     <h5>Use Output Tag without form</h5>
+    <p>
+        When used outside a form, it can still be styled and 
+        manipulated with JavaScript, 
+        but it loses some of its intended semantic meaning.
+    </p>
     <section>
         <label for="name">Enter your Name :</label>
         <input type="text" id="name">
-        <button type="button" onclick="convert()">CLICK</button>
+        <button type="button" 
+        onclick="upper.value=document.getElementById('name').value.toUpperCase()">CLICK</button>
         <p>
-            <span>Your name is : <b id="upper"></b></span>
+            <span>Your name is : <b><output id="upper"></output></b></span>
         </p>
     </section> 
-
-
-
-
-
 
     <!-- we will learn below in javascript-->
     <script>
