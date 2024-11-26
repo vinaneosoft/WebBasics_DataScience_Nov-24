@@ -25,6 +25,18 @@
             </p>
         </form>
     </section>
+    <hr>
+    <h5>Use Output Tag</h5>
+    <section>
+        <form onsubmit="event.preventDefault(); upper.value=name.value.toUpperCase()">
+            <label for="name">Enter your Name :</label>
+            <input type="text" id="name">
+            <button type="submit">CLICK</button>
+            <p>
+                <span>Your name is : <b> <output id="upper"></output> </b></span>
+            </p>
+        </form>
+    </section>
     <!-- we will learn below in javascript-->
     <script>
         function convert(){
