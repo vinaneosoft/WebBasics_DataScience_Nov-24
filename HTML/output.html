@@ -6,28 +6,29 @@
     <title>Output</title>
 </head>
 <body>
-    <section>
+   <!--  <section>
         <label for="name">Enter your Name :</label>
         <input type="text" id="name">
         <button type="button" onclick="convert()">CLICK</button>
         <p>
             <span>Your name is : <b id="upper"></b></span>
         </p>
-    </section>
+    </section> -->
     <hr>
     <section>
-        <form>
+        <form onsubmit="convert()">
             <label for="name">Enter your Name :</label>
             <input type="text" id="name">
             <button type="submit">CLICK</button>
             <p>
-                <span>Your name is : <b id="upper2"></b></span>
+                <span>Your name is : <b id="upper"></b></span>
             </p>
         </form>
     </section>
     <!-- we will learn below in javascript-->
     <script>
         function convert(){
+            event.preventDefault();
             let myname=document.getElementById("name").value;
             let upper=myname.toUpperCase();
             document.getElementById("upper").textContent=upper;
