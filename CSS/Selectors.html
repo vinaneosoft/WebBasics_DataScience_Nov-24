@@ -4,13 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML LIST</title>
+    <style>
+        /*element selector*/
+        ol{
+            border: 4px double pink;
+        }
+        /*class selector*/
+        .drink{
+            color: red;
+        }
+        .olist{
+            background-color: lightblue;
+        }
+        /*select li having class 'drink'*/
+        li.drink{
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <article>
         <h2>Ordered List</h2>
         <h3>Hot Drinks</h3>
-        <ol style="border: 1px solid yellow;">
-            <li style="border: 1px solid darkblue;">Tea</li>  <!-- type : 1-->
+        <ol class="olist">
+            <li class="drink">Tea</li>  <!-- type : 1-->
             <li>Coffee</li>  
         </ol>
         <ol type="A">  <!-- type A, a, I, i-->
@@ -20,13 +37,13 @@
         <ol start="4" type="A">
             <li>Tea</li>  <!-- type : 1-->
             <li>Coffee</li> 
-            <li>Lemon Tea</li>  
+            <li class="drink">Lemon Tea</li>  
             <li>Coffee</li> 
             <li>Coffee</li> 
             <li>Coffee</li> 
             <li>Coffee</li> 
         </ol>
-        <ol reversed>
+        <ol reversed class="olist">
             <li>Tea</li>  
             <li>Coffee</li>  
             <li>Milk</li> 
@@ -42,14 +59,14 @@
             <li>Coffee</li> 
             <li>Coffee</li> 
         </ol>
-        <ol>
+        <ol class="olist">
             <li>Tea</li>  <!-- type : 1-->
             <li>Coffee</li>  
         </ol>
     </article>
     <article>
         <h2>Un-Ordered List</h2>
-        <h3>Hot Drinks</h3>
+        <h3 class="drink">Hot Drinks</h3>
        
         <ul type="circle"> <!-- type disc, circle, square-->
             <li>Tea</li>  <!-- type="disc"-->
@@ -64,7 +81,7 @@
    <article>
     <h2>Definition List</h2>
     <dl>
-        <dt style="background-color: yellow;">HTML</dt>
+        <dt>HTML</dt>
         <dd>HTML is Hypertest Markup Language</dd>
         <dd>HTML contains tag to represent content on the web page</dd>
         <dt>CSS</dt>
@@ -91,23 +108,5 @@
         <li> Python</li>
         <li> c#</li>
     </ol>
-    <h4>Assignment (wrong nesting)</h4>
-    <ol>
-        <li>Java</li>
-        <ul>
-            <li>Core Java</li>
-            <li>Advanced Java</li>
-            <li>Framework</li>
-            <ul>
-                <li>Spring</li>
-                <li>Libenate</li>
-            </ul>
-        </ul>
-        <li> Python</li>
-        <li> c#</li>
-    </ol>
-
-
-        
 </body>
 </html>
