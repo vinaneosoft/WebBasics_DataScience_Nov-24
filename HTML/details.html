@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summary Details Demo</title>
+</head>
+<body>
+<article>
+    <details>
+        <summary>HTML</summary>
+        <div>
+            <p>HTML is Hypertext Markup Language</p>
+        </div>
+    </details>
+</article>
+<hr>
+<!-- summary tag must be a direct child of details-->
+<!-- below is a wrong nesting-->
+<article>
+    <details>
+        <section>
+            <summary>HTML</summary>
+        </section>
+        <div>
+            <p>HTML is Hypertext Markup Language</p>
+        </div>
+    </details>
+</article>
+<hr><article>
+    <details>
+       
+       <article>
+        <header></header>
+        <img>
+        <p>
+            article regarding HTML
+        </p>
+        <footer></footer>
+       </article>
+       <article>
+        <header></header>
+        <img>
+        <p>
+            article regarding CSS
+        </p>
+        <footer></footer>
+       </article>
+
+       <summary>Web Basics</summary>
+    </details>
+</article>
+
+</body>
+</html>

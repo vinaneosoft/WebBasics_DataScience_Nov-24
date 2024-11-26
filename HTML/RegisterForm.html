@@ -31,6 +31,19 @@
         <textarea id="comments" cols="50" placeholder="add extra comments (optional)"></textarea>
         <input type="text" placeholder="set new password" title="Password must have atleast one small letter, capital letter, digit, symbol()" required pattern="(?=.*\d.*)(?=.*[a-zA-Z].*)(?=.*[@!#\$%&\?].*).{5,10}">
         <input type="hidden" name="hiddenfield" value="courseregistration"><br><br>
+        <datalist id="flavors">
+            <option>Vanilla</option>
+            <option>Mango</option>
+            <option>Coconut</option>
+            <option>ButterScotch</option>
+        </datalist>
+        <datalist id="flavors2">
+            <option value="vn">Vanilla</option>
+            <option value="mn">Mango</option>
+            <option>Coconut</option>
+            <option>ButterScotch</option>
+        </datalist>
+        <input list="flavors2" placeholder="select flavor from list"><br><br>
         <input type="submit" value="ENROLL"> <input type="reset">
     </form>
     <!-- month, week, color, url, range, hidden-->
