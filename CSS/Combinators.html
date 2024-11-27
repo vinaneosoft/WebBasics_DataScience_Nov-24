@@ -4,15 +4,55 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Combinators</title>
+        <style>
+            /* select descendant (direct+indirect) paragraphs inside parent #parent and style them*/
+            #parent p{
+                background-color: gray;
+            }
+            /* select child (direct childs) paragraphs inside parent #parent and style them*/
+            #parent>p{
+                color: yellow;
+            }
+            /*select immediate paragraph sibling(if have) of element #head*/
+            #head+p{
+                border: 4px solid green;
+            }
+            /*select immediate any sibling of element #head*/
+            #head+*{
+                text-transform: uppercase;
+            }
+            /*select all paragraph siblings next to element #head*/
+            #head~p{
+                border: 5px double red;
+            }
+        </style>
     </head>
     <body>
         <div id="parent">
-            <header>
+            There are four different combinators in CSS:
+
+            <ul>
+                <li>Descendant combinator (space)</li>
+                <li>Child combinator (>)</li>
+                <li>Next sibling combinator (+)</li>
+                <li>Subsequent-sibling combinator (~)</li>
+            </ul>
+            <span>------parent started------</span>
+            <p>
+                para 0 India is my country
+            </p>
+            <header id="head">
                 this is header
             </header>
+             <section>
+                this is section 1
+             </section> 
             <p>
                 para 1 India is my country
             </p>
+            <section>
+                this section 2
+            </section>
             <p>
                 para 2 India is my country
             </p>
@@ -28,6 +68,14 @@
                 </div>
                 <p> para 5 this is footer para</p>
             </footer>
+            <span>------parent ended------</span>
         </div>
+
+
+
+
+        <p>
+            para 6 India is my country
+        </p>
     </body>
 </html>
