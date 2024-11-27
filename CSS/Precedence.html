@@ -4,15 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Precedence</title>
+    <link rel="stylesheet" href="./Styles/ColorStyle.css">
     <style>
         h2{
             background-color: aqua;
             border: 3px dotted violet;
         }
+        .mainheading{
+            border: 2px double darkblue;
+        }
+        #heading{
+            border: 2px solid darkgreen;
+        }
+        /*1. id selector, 2. class and attribute selector, 3. element selector*/
+         #heading2{
+            color: blue;
+        } 
+        .subheading{
+            color: green;
+        }  
+        [class='subheading']{
+            color: aqua;
+        }  
+        h3{
+            color: red;
+        }
+         
+       
     </style>
-     <link rel="stylesheet" href="./Styles/ColorStyle.css">
 </head>
 <body>
-    <h2 style="color: crimson;border: 5px double lightblue;">Neosoft</h2>
+    <h2 id="heading" class="mainheading" style="color: crimson;border: 5px double lightblue;">Neosoft</h2>
+    <h3 id="heading2" class="subheading">WebWerks</h3>
+    <h3 id="heading3" >WebWerks</h3>
+    <h3 id="heading4" >WebWerks</h3>
+    <h3 id="heading5" class="subheading">WebWerks</h3>
 </body>
 </html>
