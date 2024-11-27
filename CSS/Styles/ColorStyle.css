@@ -2,3 +2,6 @@ table,p{
     background-color: aqua;
 }
 
+h2{
+    border: 4px dashed red;
+}
