@@ -26,11 +26,19 @@
         input[type='submit']{
             border-radius: 10px;
         }
-        /**/
+        /*style those elements having attibute pattern*/
+        [pattern]{
+            border-radius: 10px;
+        }
+        h2,h3{
+                background-color: pink;
+        }
     </style>
 </head>
 <body>
     <form >
+        <h2>Registration Form</h2>
+        <h3>Course Registration</h3>
         <input name="employeename"  id="fname" pattern="[A-Za-z ]*" placeholder="first name" required /> <!-- type="text"-->
         <input name="employeename"  title="middle name" type="text" required><br><br>
         <input name="employeename"  title="last name" type="text" required><br><br>
