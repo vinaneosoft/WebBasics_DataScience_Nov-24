@@ -18,7 +18,6 @@
         }
         article>div{
             border: 2px solid yellow;
-            /*default width of block level elements is 100% of their parent */
             width: 50%;
             /*default height of block level elements is number of lines they have*/
             /*if we give custom height then it will be fixed, then content may cross the boundary*/
@@ -36,20 +35,18 @@
     <article>
         <b>This is article</b>
         <div>
-            This is division inside the article. This is division inside the article
-
-            This is division inside the article. This is division inside the article
-            This is division inside the article. This is division inside the article
-            This is division inside the article. This is division inside the article
-            This is division inside the article. This is division inside the article
-            This is division inside the article. This is division inside the article
-            This is division inside the article. This is division inside the article
-
-            This is division inside the article. This is division inside the article
-            This is division inside the article. This is division inside the article
-            This is division inside the article. This is division inside the article
-            This is division inside the article. This is division inside the articleThis is division inside the article. This is division inside the article
-     
+            Default width of block level elements is 100% of their parent.
+             we can change this behavior by giving custom width. 
+             Default height of block level elements is number of lines they have.
+             We can change this behavior by giving custom height.
+             Custom height and width not applicable to inline elements
+             <ul>
+                <li>Width can work in % and px in any case</li>
+                <li>Height can work in % if custom height of parent is specified</li>
+                <li>Height can work in px in any case</li>
+                <li>If we give custom height and width, child can cross the boundaries of parent</li>
+                <li>If we give custom height and width, contents mat flow out of the box</li>
+             </ul>
         </div>
     </article>
 </body>

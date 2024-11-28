@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borders</title>
+    <style>
+        .block{
+            width: 100px;
+            height: 100px;
+        }
+        #block1{
+            border: 4px solid red;
+        }
+        #block2{
+            border-top-color: pink;
+            border-top-style: double ;
+            border-top-width: 10px;
+
+           /*  border-bottom-color: pink; */  /*default color black*/
+             border-bottom-style: dashed;   /*style is compulsory*/
+           /*  border-bottom-width: 5px; */ /* default width 1px*/
+           border-top-left-radius: 10px;
+           border-top-right-radius: 15px;
+        }
+        #block3{
+            border-width: 5px;
+            border-style: double; /*t==r==b==l*/
+            border-style: double solid; /*t==b, l==r*/
+            border-style: double solid dotted; /*t, r, b, l==r*/
+            border-style: double solid dotted dashed; /*t, r, b, l*/
+            border-color: yellow;
+            border-radius: 100%;
+        }
+        #block4{
+            border: solid 2px green; /*sequence does not matter*/
+            border-radius: 10px;
+            border-radius: 10px 30px;
+            border-radius: 10px 30px 20px;
+            border-radius: 10px 30px 20px 50px; /*tl, tr, br, bl*/
+            
+        }
+    </style>
+</head>
+<body>
+    <section class="block" id="block1">
+        block1
+    </section>
+    <section class="block" id="block2">
+        block2
+    </section>
+    <section class="block" id="block3">
+        block3
+    </section>
+    <section class="block" id="block4">
+        block4
+    </section>
+</body>
+</html>
