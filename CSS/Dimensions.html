@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dimension</title>
     <style>
+ /*contents will go to new line if no space in previous line, height gets auto increased*/
         body{
             border: 2px solid green;
         }
@@ -12,17 +13,22 @@
             border: 2px solid blue;
              /*default width of block level elements is 100% of their parent
              we can change this behavior by giving custom width */
-            width: 600px;
-        }
-        article>b{
-            border: 2px solid red;
-            width: 100px; /*inline elements have width till their contents. custom height and width not applicable*/
+            width: 70%;
+            height: 400px; 
         }
         article>div{
             border: 2px solid yellow;
             /*default width of block level elements is 100% of their parent */
             width: 50%;
-            /*contents will go to new line if no space in previous line*/
+            /*default height of block level elements is number of lines they have*/
+            /*if we give custom height then it will be fixed, then content may cross the boundary*/
+            height: 30% /*200px*/;
+        }
+        article>b{
+            border: 2px solid red;
+            /*inline elements have width & height till their contents. custom height and width not applicable*/
+            width: 100px; 
+            height: 200px;
         }
     </style>
 </head>
@@ -31,6 +37,19 @@
         <b>This is article</b>
         <div>
             This is division inside the article. This is division inside the article
+
+            This is division inside the article. This is division inside the article
+            This is division inside the article. This is division inside the article
+            This is division inside the article. This is division inside the article
+            This is division inside the article. This is division inside the article
+            This is division inside the article. This is division inside the article
+            This is division inside the article. This is division inside the article
+
+            This is division inside the article. This is division inside the article
+            This is division inside the article. This is division inside the article
+            This is division inside the article. This is division inside the article
+            This is division inside the article. This is division inside the articleThis is division inside the article. This is division inside the article
+     
         </div>
     </article>
 </body>
