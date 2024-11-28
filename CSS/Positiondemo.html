@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        /*every element's position is default static : we can not change*/
+        body{
+            border: 4px solid;
+        }
+        article{
+            border: 3px double red;
+        }
+        div{
+            background-color: yellow;
+            border: 2px solid burlywood;
+            /* margin-left: 50px; */
+            position: relative; /*position changed relative to current position*/
+            left: 50px;
+            top:20px;
+        }
+    </style>
+</head>
+<body>
+<article>
+    <div>
+        this div block will be positioned
+    </div>
+</article>
+</body>
+</html>
