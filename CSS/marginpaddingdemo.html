@@ -36,7 +36,14 @@
         }
         #block5{
             margin: auto;
-            text-align: center;
+            /*use shorthand property for padding, 
+            but give padding only at top and bottom, no padding and left and right*/
+            padding: 10px 0;
+            padding: 10px 0 20px;
+            padding: 10px 0px 20px 0px;
+            /*use shorthand property for padding, 
+            but give padding only at top and right, no padding and left and bottom*/
+            padding : 20px 30px 0px 0px
         }
     </style>
 </head>
@@ -68,8 +75,8 @@
     <article id="spacing">
         <section class="block" id="block5">
             padding is the spacing given inside the element selected.
-            margin is the spacing given arround (outside) the element selected
-            padding top, bottom, left, right.
+            margin is the spacing given arround (outside) the element selected.
+            padding top, bottom, b, left, right.
             margin top, bottom , left, right
         </section>
     </article>

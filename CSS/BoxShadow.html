@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .block{
+            border: 3px double darkmagenta;
+            width: 40%;
+            margin: 40px;
+            padding: 10px;
+        }
+        /*in box shadow 2 values for direction are compulsory*/
+        #block1{
+            box-shadow: 10px 0px; /*r, b*/
+        }
+        #block2{
+            box-shadow: 10px 5px 10px;
+        }
+        #block3{
+            box-shadow: 10px 5px 50px green;
+        }
+        #block4{
+            box-shadow: -10px 5px 5px green; /*l, b*/
+        }
+        #block5{
+            box-shadow: -10px -5px  green; /*l, t*/
+        }
+    </style>
+</head>
+<body>
+    <section class="block" id="block1">
+        padding is the spacing given inside the element selected.
+        margin is the spacing given arround (outside) the element selected
+        padding top, bottom, left, right.
+        margin top, bottom , left, right
+     </section>
+     <section class="block" id="block2">
+        padding is the spacing given inside the element selected.
+        margin is the spacing given arround (outside) the element selected
+        padding top, bottom, left, right.
+        margin top, bottom , left, right
+     </section>
+     <section class="block" id="block3">
+         padding is the spacing given inside the element selected.
+         margin is the spacing given arround (outside) the element selected
+         padding top, bottom, left, right.
+         margin top, bottom , left, right
+     </section>
+     <section class="block" id="block4">
+         padding is the spacing given inside the element selected.
+         margin is the spacing given arround (outside) the element selected
+         padding top, bottom, left, right.
+         margin top, bottom , left, right
+     </section>
+     <article id="spacing">
+         <section class="block" id="block5">
+             padding is the spacing given inside the element selected.
+             margin is the spacing given arround (outside) the element selected.
+             padding top, bottom, b, left, right.
+             margin top, bottom , left, right
+         </section>
+     </article>
+</body>
+</html>
