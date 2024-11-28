@@ -20,19 +20,25 @@
             border: 3px solid red;
             width: 300px;
         }
+        #position3{
+            position: absolute; /*position changed according to nearest positioned parent position, calculations starts from parent boundary*/
+            left :350px;
+            
+        }
     </style>
 </head>
 <body>
 <article>
     <div id="position1">
         <b> this div block will be positioned</b>
+        every element's position is default static : we can not change
+            position : absolute =>when position is relative, position gets changed relative to current position
         <div id="position2">
-            every element's position is default static : we can not change
-            when position is relative, position gets changed relative to current position
+           postion: fixed=>
         </div>
         <div id="position3">
-            every element's position is default static : we can not change
-            when position is relative, position gets changed relative to current position
+            position : absolute =>position changed according to nearest positioned parent position, calculations starts from parent boundary
+            Absolute positioned elements are removed from the normal flow, and can overlap elements.
         </div>
     </div>
 </article>
