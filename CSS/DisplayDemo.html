@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Demo</title>
+    <style>
+        /*block level elements span to full of their parent,
+        they always start at new line. We can give custom height and width to them*/
+
+            /*inline level elements span till their contents,
+        come in one line till space is there.  height and width not applicable to to them*/
+        .block{
+            border: 3px double darkmagenta;
+            width: 40%;
+            margin: 10px;
+            display: inline-block;  /*block level elements comes in one line oneline+height and width*/
+             /* display:inline  */; /*block level elements converted to inline elements oneline (h and w not applicable)*/
+        }
+        #block1 .inline{
+            border: 3px double darkgoldenrod;
+            width: 40%;
+            /* display: inline-block; */ /*oneline + height & width applicable*/
+            display:block; /*inline elements converted to block*/
+        }
+    </style>
+</head>
+<body>
+    <section class="block" id="block1">
+       <b class="inline"> padding is the spacing given inside the element selected.</b>
+      <i class="inline"> padding is the spacing given inside the element selected.</i>
+     </section>
+     <section class="block" id="block2">
+        padding is the spacing given inside the element selected.
+        
+        
+     </section>
+     <section class="block" id="block3">
+         padding is the spacing given inside the element selected.
+        
+     </section>
+     <section class="block" id="block4">
+         padding is the spacing given inside the element selected.
+        
+     </section>
+     <section class="block" id="block5">
+        padding is the spacing given inside the element selected.
+       
+    </section>
+   
+</body>
+</html>
