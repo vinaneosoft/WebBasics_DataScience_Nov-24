@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dimension</title>
+    <style>
+        body{
+            border: 2px solid green;
+        }
+        body>article{
+            border: 2px solid blue;
+             /*default width of block level elements is 100% of their parent
+             we can change this behavior by giving custom width */
+            width: 600px;
+        }
+        article>b{
+            border: 2px solid red;
+            width: 100px; /*inline elements have width till their contents. custom height and width not applicable*/
+        }
+        article>div{
+            border: 2px solid yellow;
+            /*default width of block level elements is 100% of their parent */
+            width: 50%;
+            /*contents will go to new line if no space in previous line*/
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <b>This is article</b>
+        <div>
+            This is division inside the article. This is division inside the article
+        </div>
+    </article>
+</body>
+</html>
