@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Units</title>
+    <style>
+        /*em, rem dynamic units*/
+        html{
+            font-size: 16px;
+        }
+        #para1{
+            font-size: 15px;
+        }
+        /*double the size of b tag bold1 from current size*/
+        #bold1{
+            font-size: 2em; /* 2*15=30px    em unit*/
+          /*   font-size: 0.5em;  */
+        }
+         /*double the size of b tag bold3 from root element size */
+        #bold3{
+            font-size: 2rem; /*2 * 20= 40px */
+        }
+    </style>
+</head>
+<body>
+    <p id="para1">
+        <b id="bold1">I love my country</b>
+        <b>I love my country</b>
+        <b id="bold3">I love my country</b>
+    </p>
+    <p>
+        <b>India is my country</b>
+        <i>I love my country</i>
+    </p>
+    <p>
+        <b>India is my country</b>
+        <i>I love my country</i>
+    </p>
+    <p>
+        <b>India is my country</b>
+        <i>I love my country</i>
+    </p>
+    <p>
+        <b>India is my country</b>
+        <i>I love my country</i>
+    </p>
+    <h1>Lata Mangeshkar <small> singer</small></h1>
+    <h2>Lata Mangeshkar <small> singer</small></h2>
+    <h2>Lata Mangeshkar <span style="font-size: 0.84em;"> singer</span></h2>
+    <p>
+        When you use the <small> tag in a nested form then the </small> tag will
+             going to change the font size of the text in between it with respect to the parent element’s 
+            font size which means changing text with respect to its surroundings.
+    </p>
+    <div>
+        Each heading tag has a default font size, which can be customized using CSS. Here are the default font sizes for each heading tag
+        <ul>
+            <li><h1>h1 : 2em (32px)</h1></li>
+            <li><h2>h2 : 1.5em (24px)</h2></li>
+            <li><h3>h3 : 1.17em (18.72px)</h3></li>
+            <li><h4>h4 : 1em (16px)</h4></li>
+            <li><h5>h5 : 0.83em (13.28px)</h5></li>
+            <li><h6>h6 : 0.67em (10.72px)</h6></li>
+        </ul>
+
+These sizes are relative to the default font size of the browser, which is typically 16px
+
+    </div>
+</body>
+</html>
