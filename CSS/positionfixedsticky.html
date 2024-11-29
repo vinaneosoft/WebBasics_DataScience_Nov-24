@@ -25,6 +25,10 @@
         #division{
             margin-top: 100px;
         }
+        #stickydemo{
+            position:sticky;
+            bottom: 0px;
+        }
     </style>
 </head>
 <body>
@@ -44,12 +48,6 @@
     <div id="division">
       <article>
         <h3>LATA MANGESHKAR</h3>
-        <p>
-            Below images are not in a wrapper
-        </p>
-        <!-- src : path of the image : absolute path, relative, -->
-      <img style="height: 100px; width: 100px;"   src="https://th.bing.com/th/id/OIP.bZTeHRhN1StlrXcbGDAiBAHaHa?rs=1&pid=ImgDetMain" alt="Lata Mangeshkar">
-      
       <p>
         Below images are  in a wrapper
         </p>
@@ -58,9 +56,9 @@
         <img src="https://th.bing.com/th/id/OIP.bZTeHRhN1StlrXcbGDAiBAHaHa?rs=1&pid=ImgDetMain" alt="lata m">
         <img src="https://th.bing.com/th/id/OIP.bZTeHRhN1StlrXcbGDAiBAHaHa?rs=1&pid=ImgDetMain" alt="lata m">
       </figure>
-      <figure style="border: 1px solid green;">
+      <figure style="border: 1px solid green;" id="stickydemo">
         <figcaption>Lata Mangeshkar</figcaption>
-        <img src="https://th.bing.com/th/id/OIP.bZTeHRhN1StlrXcbGDAiBAHaHa?rs=1&pid=ImgDetMain" alt="lata m">
+        <img height="200" width="200" src="https://th.bing.com/th/id/OIP.bZTeHRhN1StlrXcbGDAiBAHaHa?rs=1&pid=ImgDetMain" alt="lata m">
       </figure>
 
       <section id="birthinfo">
@@ -85,7 +83,7 @@
 
         <section id="careerinfo">
             <h3>About Career</h3>
-            <img src="../Images/Girl-singing-with-mic.jpg" alt="girl with mic">
+            
             Lata Mangeshkar is one of the best singers of the Hindi 
             film industry. She is listed in the Guinness Book of 
             World Records as the most recorded artist in the world. 
