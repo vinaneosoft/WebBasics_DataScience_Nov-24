@@ -5,11 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PseudoElements</title>
     <style>
+        /*pseudo elements*/
         /*style first letter in mainHeading*/
         #mainHeading::first-letter{
             font-size: 50px;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             color: darkmagenta;
+        }
+        #mainHeading:hover::after{
+            content: '- Popular singer';
         }
     </style>
 </head>
