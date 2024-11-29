@@ -13,11 +13,19 @@
             transition: 3s;
         }
         #block1:hover{
-            transform: translate(100px); 
+            transform: translate(100px,200px); 
             /*translateX*/
         }
         #block2:hover{
-            transform: rotate(-360deg); 
+            transform: rotate(180deg); 
+            /*translateX*/
+        }
+        #block3{
+            position: relative;
+            left:300px
+        }
+        #block3:hover{
+            transform: scale(-1.5, 2.5) /**/
             /*translateX*/
         }
     </style>
@@ -28,6 +36,9 @@
     </div>
     <div class="block" id="block2">
         this box gets rotated
+    </div>
+    <div class="block" id="block3">
+        this box gets scaled
     </div>
 </body>
 </html>
