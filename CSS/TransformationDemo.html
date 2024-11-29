@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform Demo</title>
+    <style>
+        .block{
+            width: 100px;
+            height: 100px;
+            border: 3px solid darkblue;
+            background: lightcoral;
+            transition: 3s;
+        }
+        #block1:hover{
+            transform: translate(100px); 
+            /*translateX*/
+        }
+        #block2:hover{
+            transform: rotate(-360deg); 
+            /*translateX*/
+        }
+    </style>
+</head>
+<body>
+    <div class="block" id="block1">
+        this box gets translated
+    </div>
+    <div class="block" id="block2">
+        this box gets rotated
+    </div>
+</body>
+</html>
