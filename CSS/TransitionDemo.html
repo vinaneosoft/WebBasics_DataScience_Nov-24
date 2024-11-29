@@ -7,12 +7,11 @@
     <style>
         /*transtion works with change in numeric property, color considered numeric*/
         .block{
-            margin-left: 0px;
             width: 100px;
             height: 100px;
             border: 3px solid pink;
             background-color: yellow;
-            transition-duration: 3s;
+             transition-duration: 3s; 
             transition-delay: 500ms;
             transition-timing-function: linear; /*ease, ease-in, ease-out, linear*/
             /*transition-property: all  this is default*/ 
@@ -38,15 +37,15 @@
             background-color: green;
         }
         #block5{
-            transition: 3s 1s all  ease-in ;
-           /*  transition: 3s 1s width  ease-out ;
-            transition: 3s 1s width height linear ; */
+           /*  transition: 3s 1s all  ease-in ; */
+             /* transition: 3s 1s width  ease-out ; */
+            transition: width 2s 1s ease-in, height 2s 1s linear, border-radius 2s;
         }
         #block5:hover{
             width: 300px;
             height: 300px;
-            border-radius: 10px;
-            margin-left: 100px;
+            border-radius: 30px;
+           
         }
     </style>
 </head>
