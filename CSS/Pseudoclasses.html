@@ -46,6 +46,26 @@
         tfoot>tr:last-child{
             background: darkcyan;
         }
+        tr:nth-child(3){
+            background: lightgray;
+        }
+
+        #lataji{
+            border: 2px solid pink;
+        }
+        /*set background color to first child of article*/
+        article>*:first-child{
+            background: darkcyan;
+        }
+        article>*:last-child{
+            background: darkgreen;
+        }
+        article:last-child{
+            background-color:red;
+        }
+        tbody>tr:first-child>td:first-child{
+            background-color: blue;
+        }
     </style>
 </head>
 <body>
@@ -101,8 +121,23 @@
         <tfoot>
             <tr><td colspan="3">This is footer</td></tr>
             <tr><td colspan="3">This is footer</td></tr>
+            <tr><td colspan="3">This is footer</td></tr>
         </tfoot>
       </table>
-      
+    <hr>
+    <article id="lataji">
+        <header>
+            <h2>Lata Mangeshkar</h2>
+        </header>
+        <section>
+            <h3>Personal Life</h3>
+        </section>
+        <section>
+            <h3>Career</h3>
+        </section>
+        <footer>
+            <a href="#">More info about Lata ji</a>
+        </footer>
+    </article>
 </body>
 </html>
