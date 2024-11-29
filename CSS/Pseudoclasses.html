@@ -15,8 +15,7 @@
         nav a{
             color: white;
             text-decoration: none;
-            display: inline-block;
-            padding: 20px;
+            padding: 15px;
         }
         a:link{
             color: yellow;
@@ -30,6 +29,12 @@
         a:active{
             background-color: pink;
         }
+        table,th,td{
+            border: 2px solid;
+            border-collapse: collapse;
+            padding: 5px;
+            width: 50%;
+        }
     </style>
 </head>
 <body>
@@ -41,5 +46,48 @@
             <li><a href="#">Sunidhi Chouhan</a></li>
         </ol>
     </nav>
+<hr>
+    <table>
+        <thead>
+            <tr>
+                <th>Company</th>
+                <th>Contact</th>
+                <th>Country</th>
+              </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td>Alfreds Futterkiste</td>
+                <td>Maria Anders</td>
+                <td>Germany</td>
+              </tr>
+              <tr>
+                <td>Centro comercial Moctezuma</td>
+                <td>Francisco Chang</td>
+                <td>Mexico</td>
+              </tr>
+              <tr>
+                <td>Ernst Handel</td>
+                <td>Roland Mendel</td>
+                <td>Austria</td>
+              </tr>
+              <tr>
+                <td>Island Trading</td>
+                <td>Helen Bennett</td>
+                <td>UK</td>
+              </tr>
+              <tr>
+                <td>Laughing Bacchus Winecellars</td>
+                <td>Yoshi Tannamuri</td>
+                <td>Canada</td>
+              </tr>
+              <tr>
+                <td>Magazzini Alimentari Riuniti</td>
+                <td>Giovanni Rovelli</td>
+                <td>Italy</td>
+              </tr>
+        </tfoot>
+      </table>
+      
 </body>
 </html>
