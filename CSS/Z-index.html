@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z-index</title>
+    <style>
+        div{
+            border: 2px solid pink;
+            background-color: yellow;
+            height: 100px;
+        }
+        #block1{
+            position: absolute;
+            z-index: 1;
+        }
+        #block2{
+            position: absolute;
+        }
+        #block1:hover{
+            bottom: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="block1">INDIA 1</div>
+    <div id="block2">INDIA 2</div>
+    <div id="block3">INDIA 3</div>
+</body>
+</html>
