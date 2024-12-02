@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       #gridcontainer{
+        width: 50%;
+        height: 300px;
+        display: grid;
+        border: 2px solid red;
+        /*1 40px 2 50px 3 auto 4 50px 5 40px 6*/
+        grid-template-columns: 40px 50px auto 50px 40px; 
+         /*1 20% 2 100px 3 auto 4*/
+        grid-template-rows: 20% 100px auto;
+        /*any name to lines in bracket syntax*/
+        grid-template-columns: [first] 40px [line2] 50px [line3] auto [col4-start] 50px [five] 40px [end];
+        grid-template-rows: [row1-start] 20% [row1-end] 100px [third-line] auto [last-line];  
+    } 
+       #gridcontainer>*{
+        border: 2px solid green;
+       }
+
+    </style>
+</head>
+<body>
+    <div id="gridcontainer">
+        <div>India</div>
+        <div>is</div>
+        <div>my</div>
+        <div>country</div>
+        <div>I</div>
+        <div>India</div>
+        <div>is</div>
+        <div>my</div>
+        <div>country</div>
+        <div>I</div>
+        <div>India</div>
+        <div>is</div>
+        <div>my</div>
+        <div>country</div>
+        <div>I</div>
+    </div>
+</body>
+</html>
