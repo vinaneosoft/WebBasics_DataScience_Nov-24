@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Area Demo</title>
+    <style>
+         .grid-parent{
+            display: grid;
+            grid-template-areas: 'header header header'
+                                  'left main right'
+                                  'footer footer footer';
+         }
+        .grid-parent>*{
+            border: 2px solid yellow;
+            padding: 10px;
+        }
+        #headeritem{
+            grid-area: header;
+        }
+        #menuitem{
+            grid-area: left;
+        }
+        #mainitem{
+            grid-area: main;
+        } 
+        #rightitem{
+            grid-area: right;
+        }
+        #footeritem{
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+  <article class="grid-parent">
+    <div id="headeritem">HEADER (heading, navbar)</div>
+    <div id="menuitem">MENU (vertical navbar)</div>
+    <div id="mainitem">MAIN (article/ section/ main/ div)</div>
+    <div id="rightitem">RIGHT (aside/ advertizements, images)</div>
+    <div id="footeritem">FOOTER (sec links, copyright info, author info, sections)</div>
+  </article>  
+</body>
+</html>
