@@ -22,9 +22,19 @@
             if direction is column then column center, column start column-end*/
             /*if flex direction is row then : horizontal alignment is done using
             justify content, vertical aligment is done using align-items*/
-            align-items: end; /*items come in row center vertically*/
-    
+            align-items: start; /*def:stretch, items come in vertically center/start/end at parent*/
+            align-content: start;  /*vertically center/start/end at parent*/
         }
+        /*order:0*/
+        #employee-card>div:first-child{
+            order: 4;
+        }
+        #employee-card>div:nth-child(2){
+            order: 5;
+        }
+        /*order : 1,2,3 
+        child : 3, 4 5*/
+
     </style>
 </head>
 <body>
