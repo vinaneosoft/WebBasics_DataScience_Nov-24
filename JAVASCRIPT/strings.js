@@ -70,8 +70,6 @@ console.log(c1.toLowerCase()==c2.toLowerCase());
 console.log(c1);
 
 
-
-
 let c=56; // assignment operator // number
 
 let d="56" // string

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <button type="button" onclick="showAlert()">OPEN</button>
+    <button type="button" ondblclick="showConfirm()">Finish TEST</button>
+    <button type="button" onclick="showPrompt()">FINISH reading</button>
+    <script>
+        function showAlert(){
+            window.alert("Sorry!!! this room is not allowed for you")
+        }
+        function showConfirm(){
+            const confirmation=window.confirm("Do you really want to submit the test?")
+            console.log(confirmation);
+            if(confirmation==true)
+                window.alert("Your test submited successfully")
+        }
+        function showPrompt(){
+            const pagenum=window.prompt("Please enter page number where you have reached");
+            console.log(pagenum);
+            console.log(typeof pagenum);
+            const pn=parseInt(pagenum); // when type is string but value number
+        }
+    </script>
+</body>
+</html>
