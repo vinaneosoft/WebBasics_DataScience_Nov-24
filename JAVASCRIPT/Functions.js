@@ -38,3 +38,49 @@ document.write("<li>"+sqrFun(3)+"</li>");
 document.write("<li>"+sqrFun(9)+"</li>");
 document.write("<li>"+sqrFun(17)+"</li>");
 document.write("</ul>")
+
+// named function
+function oddEven(number) {
+    if (number % 2 == 0) {
+    document.write("Even");
+    } else {
+    document.write("Odd");
+    }
+}
+    
+// annonnymous function
+const checkEven=function(number) {
+    if (number % 2 == 0) {
+    document.write("Even");
+    } else {
+    document.write("Odd");
+    }
+}
+   
+// arrow function
+const checkOdd=(number) => {
+    if (number % 2 == 0) {
+    document.write("Even");
+    } else {
+    document.write("Odd");
+    }
+}
+   
+// features of arrow function
+const cubeFun=(num) =>{
+    return num*num*num;
+}
+//1. if arrow function contains single formal argument then () are optional
+const cubeFun2=num =>{
+    return num*num*num;
+}
+//2. if arrow function body contains single stmt then {} are optional
+const cubeFun3=num=>console.log( num*num*num);
+
+//3. if arrow function body contains single return stmt then return keyword not allowed,
+// body will automatically return the result
+const cubeFun4=num =>num*num*num;
+
+let result=cubeFun4(4);
+console.log(result);
+
