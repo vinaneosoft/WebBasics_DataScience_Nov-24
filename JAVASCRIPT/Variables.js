@@ -32,3 +32,6 @@ function loop2(){
     //document.write(message); //message is not defined
 }
 loop2();
+
+const pie=3.142;
+pie=3.14; //Assignment to constant variable.
