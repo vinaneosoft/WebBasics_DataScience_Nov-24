@@ -41,20 +41,22 @@ else {
     console.log("INVALID AGE");
 }
 
+    console.log("----for loop----");
     
 for(let i=1;i<=5; i++){
     console.log(i);
 }
-
+console.log("----while loop----");
 let j=1;
 while(j<=5){
     console.log(j);
     j++;
 }
 
+document.write("<h5>----do while loop----</h5>");
 let k=1;
 do{
-    console.log(k);
+    document.write("<b><i>"+k+"</i></b> ");
     k++;
 }while(k<=5)
 
