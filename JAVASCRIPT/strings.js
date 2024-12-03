@@ -17,14 +17,33 @@ document.write("<br>")
 
 // difference between literal and object
 
-let s1="Hello";
+let s1="Hello"; // literal
 let s2="Hello";
 console.log(s1==s2); // true : same memory location bcz value same
 
-let s3=new String("Welcome");
+let s3=new String("Welcome"); // object
 let s4=new String("Welcome")
 console.log(s3==s4); // false : difft memory location though value same
 const comp=s3.valueOf()==s4.valueOf();
 console.log(comp); // true : values are same
 
 // string are immutable
+// once we create an object we can not change the characters in it, 
+// if we change then changes will be saved in new memory location
+
+let myname="Veda";
+let concatination=myname.concat(" Sane");
+console.log(myname); // Veda or Veda Sane ? 
+console.log(concatination);
+
+let cname="Neosoft";
+cname=cname+", Rabale";
+console.log(cname); // Neosoft or Neosoft, Rabale??
+
+const empCode=45678;
+//empCode="neo-"+empCode; // Assignment to constant variable.
+//console.log(empCode);
+
+const eCode=45678;
+const newCode="neo-"+eCode; 
+console.log(newCode);
