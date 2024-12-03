@@ -26,7 +26,6 @@ let s4=new String("Welcome")
 console.log(s3==s4); // false : difft memory location though value same
 const comp=s3.valueOf()==s4.valueOf();
 console.log(comp); // true : values are same
-
 // string are immutable
 // once we create an object we can not change the characters in it, 
 // if we change then changes will be saved in new memory location
@@ -58,3 +57,11 @@ console.log( message.slice(-5)); // -ve couting from end of the string
 console.log( message.substring(-5, 5));// -ve : 0 si, 5 ei
 console.log( message.slice(-5,5)); // blank string si must be smaller than ei
 console.log( message.slice(-25,30)); 
+
+let c1="indiA";
+let c2="India"
+console.log(c1.localeCompare(c2)); // c2-c1
+//if c2-c1= 0 then both strings are equal
+//if c2-c1= 1 then c2 > c1
+//if c2-c1= -1 then c2 < c1
+console.log(c1==c2);
