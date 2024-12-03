@@ -4,11 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM demo1</title>
+    <style>
+        #articleheading{
+            background: yellow;
+        }
+    </style>
 </head>
 <body>
     <article id="lataji">
-        <h3>Lata Manegshkar</h3>
+        <h3 id="articleheading" ondblclick="changeStyle()">Lata Manegshkar</h3>
         <section>
+            <h4 class="para">LATA</h4>
             <p class="para">
                 Lata Mangeshkar was an <b>Indian playback singer</b>  and occasional music composer1. She is considered to be one of
                  the greatest and most influential singers of the Indian subcontinent1
@@ -38,6 +44,21 @@
         console.log(pNodes);
         for(let para of pNodes){
             para.style.cssText="border:2px solid blue"
+        }
+        // how to access elements by class name
+        const nodes=document.getElementsByClassName("para"); //HTMLCollectionOf<Element>
+            console.log(nodes);
+        // text italic
+        for(let node of nodes){
+            node.style.fontStyle="italic";
+        }
+        // how to access unique element : by id
+        const headNode=document.getElementById("articleheading");
+        console.log(headNode);
+        headNode.style.textShadow="5px 5px 5px";
+
+        function changeStyle(){
+            headNode.style.background="Pink";
         }
     </script>
 </body>
