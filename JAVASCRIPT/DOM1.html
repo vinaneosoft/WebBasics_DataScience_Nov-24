@@ -17,6 +17,10 @@
                 <i>Lata Mangeshkar</i> was an Indian playback singer and occasional music composer1. She is considered to be one of the
                  greatest and most influential singers of the Indian subcontinent1
             </p>
+            <p >
+                <i>Lata Mangeshkar</i> was an Indian playback singer and occasional music composer1. She is considered to be one of the
+                 greatest and most influential singers of the Indian subcontinent1
+            </p>
         </section>
     </article>
     <script>
@@ -24,10 +28,17 @@
         console.log(bodyNode);
         console.log(document.title);
         /*anynode.style.property=value*/
-        bodyNode.style.backgroundColor="gray";
+      /*   bodyNode.style.backgroundColor="gray";
         bodyNode.style.border="2px double";
-        bodyNode.style.padding="20px";
+        bodyNode.style.padding="20px"; */
+        bodyNode.style.cssText="background:lightgray; border:2px solid green; padding:30px"
         document.title="Document Object Model"
+        // how to access elements by tag name
+        const pNodes=document.getElementsByTagName("p"); //HTMLCollection
+        console.log(pNodes);
+        for(let para of pNodes){
+            para.style.cssText="border:2px solid blue"
+        }
     </script>
 </body>
 </html>
