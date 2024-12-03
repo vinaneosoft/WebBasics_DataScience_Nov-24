@@ -65,3 +65,16 @@ console.log(c1.localeCompare(c2)); // c2-c1
 //if c2-c1= 1 then c2 > c1
 //if c2-c1= -1 then c2 < c1
 console.log(c1==c2);
+// compare string by ignoring the case
+console.log(c1.toLowerCase()==c2.toLowerCase());
+console.log(c1);
+
+
+
+
+let c=56; // assignment operator // number
+
+let d="56" // string
+// value comparision
+console.log(c==d);  // type ignored : loose comparision
+console.log(c===d); // type considered : strict comparision
