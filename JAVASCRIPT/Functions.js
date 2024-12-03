@@ -22,3 +22,19 @@ document.write(res1+"<br>");
 
 let res2=add(89,6);
 document.write(res2);
+
+// pass number to a function and return addition of its digits
+// example if number is 654 then 6+5+4=15 15 must be returned by function
+
+// pass the number to a function and check whether its even or odd. display the message in function
+// itself. do not return anything
+
+const  sqrFun=function(num){
+    return num*num;
+}
+document.write("<h4>Square of 3, 9, 17</h4>")
+document.write("<ul>")
+document.write("<li>"+sqrFun(3)+"</li>");
+document.write("<li>"+sqrFun(9)+"</li>");
+document.write("<li>"+sqrFun(17)+"</li>");
+document.write("</ul>")
