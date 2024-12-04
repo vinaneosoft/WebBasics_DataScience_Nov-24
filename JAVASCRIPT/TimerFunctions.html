@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <style>
+        #js{
+            border: 5px solid green;
+        }
+    </style>
+</head>
+<body >
+    <img  height="300" width="300" src="../CSS/Images/nature.jpg" alt="javascript images" id="js">
+    <figcaption id="imagetitle">nature</figcaption>
+    <script>
+        const imageNode=document.getElementById("js")
+        const captionNode=document.getElementById("imagetitle");
+        let title=captionNode.textContent; // DOM property
+        console.log(imageNode);
+        imageNode.addEventListener("mouseover", ()=>{
+            imageNode.src="../CSS/Images/box shadow.gif"
+            captionNode.textContent="Box Shadow"
+        })
+        imageNode.addEventListener("mouseout", ()=>{
+            imageNode.src="../CSS/Images/nature.jpg"
+            captionNode.textContent=title;
+        })
+    </script>
+</body>
+</html>
