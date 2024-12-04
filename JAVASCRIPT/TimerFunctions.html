@@ -53,6 +53,7 @@
             const image=images[i];
             imageNode.src=image.imagePath;
             captionNode.textContent=image.imageTitle;
+            imageNode.alt=image.imageTitle
             i++;
             if(i==images.length)
                 i=0;
