@@ -14,11 +14,16 @@
 
         for(let item of snacks){
             const liNode = document.createElement('li');
-            liNode.textContent=item; 
+            liNode.textContent=item;  // new way
             olNode.append(liNode); 
         }
 
         document.body.append(olNode);
+
+        const h3Node=document.createElement('h3');
+        const textNode=document.createTextNode("SNACKS"); // old way
+        h3Node.append(textNode);
+        olNode.before(h3Node)
     </script>
 </body>
 </html>
