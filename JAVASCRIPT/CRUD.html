@@ -18,7 +18,7 @@
 </head>
 <body>
     <div class="dimensions" id="indiadiv">
-        INDIA
+       <b>INDIA</b>
     </div>
     <script>
         const h2Node=document.createElement("h2");
@@ -29,10 +29,12 @@
         h3Node.setAttribute("id", "heading2");
         h3Node.setAttribute("class", "heading crud");
         document.body.prepend(h2Node,h3Node);   // appendChild, append, prepend
-
         const divNode=document.getElementById("indiadiv");
       //  divNode.setAttribute("class", "colors");
-         divNode.classList.add("colors");
+        divNode.classList.add("colors");
+        console.log(document.body.children); // childNodes
+        console.log(divNode.children);
+        
     </script>
 </body>
 </html>
