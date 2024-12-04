@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Element by Name and ID</title>
+</head>
+<body>
+    <form>
+        <label for="fname">First Name : </label>
+        <input type="text" name="common-name" onfocus="borderChange()" onblur="borderChange()" id="fname"><br><br>
+        <label for="mname">Middle Name : </label>
+        <input type="text" name="common-name" onfocus="borderChange()" onblur="borderChange()" id="mname"><br><br>
+        <label for="lname">Last Name : </label>
+        <input type="text" name="common-name" onfocus="borderChange()" onblur="borderChange()" id="lname"><br><br>
+    </form>
+
+    <script>
+        const oldBorder="2px solid blue";
+        const focusBorder="5px double blue";
+        document.getElementById("fname").style.backgroundColor="lightpink"
+        document.getElementById("mname").style.backgroundColor="lightgreen"
+        document.getElementById("lname").style.backgroundColor="lightblue"
+
+        const cname = document.getElementsByName("common-name")
+        for (let name of cname){
+            name.style.border=oldBorder;
+        }
+        function borderChange(){
+            console.log(event); 
+            const targetNode=event.target;// dynamic target
+            if(event.type=='focus'){
+                targetNode.style.border=focusBorder
+            }
+            if(event.type=='blur'){
+                targetNode.style.border=oldBorder;
+            }
+        }
+    </script>
+</body>
+</html>
