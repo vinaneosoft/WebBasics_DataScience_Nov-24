@@ -14,7 +14,10 @@
         <label for="lname">Last Name : </label>
         <input type="text" name="common-name" onfocus="borderChange()" onblur="borderChange()" id="lname"><br><br>
         <input type="password" placeholder="enter your password" id="pass">
-        <input type="checkbox" onchange="togglePass()" id="showp"> <label for="showp">:Show password</label>
+        <input type="checkbox" onchange="togglePass()" id="showp"> <label for="showp">:Show password</label><br><br>
+        <label>Select Gender</label>
+        <input type="radio" name="gender"  id="gender1" value="male"><label for="gender1">MALE</label>
+        <input type="radio" name="gender"  id="gender2" value="female"><label for="gender2">FEMALE</label> <br><br>
     </form>
 
     <script>
@@ -49,6 +52,19 @@
             }
             else{
                  passNode.type="password"   // DOM attribite value change
+            }
+        }
+        const radioNodes=document.getElementsByName("gender");
+        for(let radioNode of radioNodes){
+            radioNode.addEventListener('change', ()=>selectGender())
+        }
+        let gender="";
+        function  selectGender(){
+            for(let radioNode of radioNodes){
+                if(radioNode.checked){
+                   gender=radioNode.value;
+                   console.log(radioNode.value);
+                }
             }
         }
     </script>
