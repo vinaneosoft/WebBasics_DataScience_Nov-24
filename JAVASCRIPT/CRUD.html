@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <style>
+        .dimensions{
+            height: 200px;
+            width: 200px;
+            border: 2px solid red;
+        }
+        .colors{
+            background: yellow;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="dimensions" id="indiadiv">
+        INDIA
+    </div>
+    <script>
+        const h2Node=document.createElement("h2");
+        h2Node.textContent="DOM CRUD";
+        h2Node.setAttribute("id", "heading1");
+        const h3Node=document.createElement("h3");
+        h3Node.textContent="CRUD operations";
+        h3Node.setAttribute("id", "heading2");
+        h3Node.setAttribute("class", "heading crud");
+        document.body.prepend(h2Node,h3Node);   // appendChild, append, prepend
+
+        const divNode=document.getElementById("indiadiv");
+      //  divNode.setAttribute("class", "colors");
+         divNode.classList.add("colors");
+    </script>
+</body>
+</html>

@@ -20,6 +20,9 @@
     <p id="blank3">
 
     </p>
+    <p id="blank4">
+
+    </p>
     <script>
         const pNode=document.getElementById("india");
         console.log(pNode.textContent);
@@ -28,11 +31,15 @@
         const pNode2=document.getElementById("blank1")
         const pNode3=document.getElementById("blank2")
         const pNode4=document.getElementById("blank3")
+        const pNode5=document.getElementById("blank4")
         document.getElementById("pastebtn").addEventListener("click", ()=>{
             pNode2.textContent=pNode.textContent;
             pNode3.innerText=pNode.innerText;
             pNode4.innerHTML=pNode.innerHTML;
+            pNode5.innerHTML="<b>"+pNode.textContent+"</b>"
+            pNode5.innerHTML=`<b>${pNode.textContent}</b>`
         })
+        // extract text from "india" para and add that text all in bold in "blank4" para
     </script>
 </body>
 </html>
