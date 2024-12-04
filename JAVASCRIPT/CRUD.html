@@ -20,6 +20,7 @@
     <div class="dimensions" id="indiadiv">
        <b>INDIA</b>
     </div>
+    <button type="button" onclick="removeEle()">REMOVE DIV</button>
     <script>
         const h2Node=document.createElement("h2");
         h2Node.textContent="DOM CRUD";
@@ -35,6 +36,18 @@
         console.log(document.body.children); // childNodes
         console.log(divNode.children);
         
+        function removeEle(){
+            divNode.remove(); // call remove on same node whicn to remove
+            //document.body.removeChild(divNode); // call removeChild on parent and pass childnode to remove
+        }
+
+        const inputNode=document.createElement("input");
+        inputNode.type="text";
+        inputNode.name="myname";
+        inputNode.value="hari";
+        inputNode.id="myname"  // alternate approach for setAttribute
+        inputNode.classList.add("name");
+        divNode.before(inputNode);  // before, after
     </script>
 </body>
 </html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD2</title>
+</head>
+<body>
+    
+    <script>
+
+        const snacks=['bread omlet', 'pohe', 'upma', 'vada sambar']
+        const olNode=document.createElement('ol')
+
+        for(let item of snacks){
+            const liNode = document.createElement('li');
+            liNode.textContent=item; 
+            olNode.append(liNode); 
+        }
+
+        document.body.append(olNode);
+    </script>
+</body>
+</html>
