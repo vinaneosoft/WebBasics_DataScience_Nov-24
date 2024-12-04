@@ -13,6 +13,8 @@
         <input type="text" name="common-name" onfocus="borderChange()" onblur="borderChange()" id="mname"><br><br>
         <label for="lname">Last Name : </label>
         <input type="text" name="common-name" onfocus="borderChange()" onblur="borderChange()" id="lname"><br><br>
+        <input type="password" placeholder="enter your password" id="pass">
+        <input type="checkbox" onchange="togglePass()" id="showp"> <label for="showp">:Show password</label>
     </form>
 
     <script>
@@ -34,6 +36,19 @@
             }
             if(event.type=='blur'){
                 targetNode.style.border=oldBorder;
+            }
+        }
+        const passNode=document.getElementById("pass"); // DOM method
+        console.log(passNode.placeholder); //DOM attribute access
+        
+        function togglePass(){
+            const targetNode=event.target;
+            console.log(targetNode.checked); // DOM attribute access
+            if(targetNode.checked==true){
+                passNode.type="text"   // DOM attribite value change
+            }
+            else{
+                 passNode.type="password"   // DOM attribite value change
             }
         }
     </script>
