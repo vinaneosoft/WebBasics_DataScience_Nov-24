@@ -26,6 +26,37 @@
             imageNode.src="../CSS/Images/nature.jpg"
             captionNode.textContent=title;
         })
+      /*   window.setTimeout(()=>{
+            imageNode.src="../CSS/Images/box shadow.gif"
+            captionNode.textContent="Box Shadow"
+        }, 5000) */
+
+        const images=[
+            {
+                imagePath:'../CSS/Images/box shadow.gif',
+                imageTitle:"Box Shadow"
+            },
+            {
+                imagePath:'https://th.bing.com/th/id/R.dcdf959e9f94edd139709be5a64c3d2d?rik=IRT7wj%2fwSpvVnw&riu=http%3a%2f%2fwallpapercave.com%2fwp%2fGpUHmC4.jpg&ehk=cCwHcwkI%2bPv4CUYshLR7ihTuWk4AKUT3xVe7mj4cQII%3d&risl=&pid=ImgRaw&r=0',
+                imageTitle:"Beautiful Moon"
+            },
+            {
+                imagePath:'../CSS/Images/nature.jpg',
+                imageTitle:"NATURE"
+            }
+        ]
+
+        window.setInterval(()=>slideShow(), 2000)
+        let i=0;
+        function slideShow(){
+            console.log(i);
+            const image=images[i];
+            imageNode.src=image.imagePath;
+            captionNode.textContent=image.imageTitle;
+            i++;
+            if(i==images.length)
+                i=0;
+        }
     </script>
 </body>
 </html>
