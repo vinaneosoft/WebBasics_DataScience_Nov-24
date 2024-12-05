@@ -33,3 +33,29 @@ console.log(filtArray);
 
 const emp=empNames.find((value)=>value.toUpperCase().startsWith("D"))
 console.log(emp);
+
+console.log("-------------------");
+// attach prefix "NEO-" to every name from array
+let prefixNames=[]
+empNames.forEach(value=>{
+    prefixNames.push("NEO-"+value);
+});
+console.log(empNames);
+console.log(prefixNames);
+
+let mappedArray=empNames.map((value)=>"NEO-"+value)
+console.log(empNames);
+console.log(mappedArray);
+
+
+let salaries=[23,11,4,3,66]
+const summ=salaries.reduce((accum, value)=>accum+value);
+/*accum : 23, value:11 accum=34
+accum : 34, value :4 accum=38*/
+console.log(summ);
+
+const summ2=salaries.reduce((accum, value)=>accum+value, 100);
+/*accum : 100, value:23 accum=100+23 123
+accum : 123, value:11 accum=134
+accum : 134, value :4 accum=138*/
+console.log(summ2);
