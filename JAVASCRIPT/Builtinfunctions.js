@@ -48,7 +48,7 @@ console.log(empNames);
 console.log(mappedArray);
 
 
-let salaries=[23,11,4,3,66]
+let salaries=[56789,34000,40000,67000,56000]
 const summ=salaries.reduce((accum, value)=>accum+value);
 /*accum : 23, value:11 accum=34
 accum : 34, value :4 accum=38*/
@@ -59,3 +59,19 @@ const summ2=salaries.reduce((accum, value)=>accum+value, 100);
 accum : 123, value:11 accum=134
 accum : 134, value :4 accum=138*/
 console.log(summ2);
+
+// add salaries which are greater than 50000
+//filter, reduce
+
+const filtersumm=salaries.filter((salary)=>salary>50000).reduce((acc,salary)=>acc+salary)
+console.log(filtersumm);
+
+// increment salary by 10000 whose salary is less than 50000
+// filter, map, forEach
+salaries.filter((sal)=>sal<50000).map((sal)=>sal+10000).forEach((sal)=>console.log(sal))
+
+const ar1=salaries.filter((sal)=>sal<50000);
+console.log(ar1);
+const ar2=ar1.map((sal)=>sal+10000);
+console.log(ar2);
+ar2.forEach((sal)=>console.log(sal))
