@@ -39,22 +39,34 @@ const namePattern=new RegExp("^[A-Za-z ]*$");
 const mobilePattern=new RegExp("^[0-9]{10}$")
 const passwordPattern=new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{5,12}$")
 const emailPattern=new RegExp("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$");
+
+const invalidBorder="4px solid red";
+const validBorder="4px solid green";
 function validate1(){
     errorNode1.textContent=""
     fname=fnameNode.value;
+    fnameNode.style.border=invalidBorder;
     //console.log(namePattern.test(fname));
     if(fname=="")
         errorNode1.textContent=requireMessage
     else if(namePattern.test(fname)==false)
         errorNode1.textContent="first name must contain only alphabet"
+    else {
+        fnameNode.style.border=validBorder;
+    }
+
 }
 function validate2(){
     errorNode2.textContent=""
+    lnameNode.style.border=invalidBorder;
     lname=lnameNode.value;
     if(lname=="")
         errorNode2.textContent=requireMessage
     else if(namePattern.test(lname)==false)
         errorNode2.textContent="last name must contain only alphabet"
+    else{
+        lnameNode.style.border=validBorder;
+    }
 }
 
 function validate3(){

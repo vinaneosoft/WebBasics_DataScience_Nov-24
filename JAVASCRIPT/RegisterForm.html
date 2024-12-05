@@ -31,6 +31,12 @@
         #buttons{
             text-align: center;
         }
+     /*    input:valid{
+            border: 2px solid green;
+        }
+        input:invalid{
+            border: 2px solid red;
+        } */
     </style>
 </head>
 <body>
@@ -42,14 +48,14 @@
         <table>
         <tr>
           <td><label for="fname">First Name:</label></td>
-           <td> <input name="employeename" id="fname" pattern="[A-Za-z ]*" required /></td>
+           <td> <input name="employeename" id="fname" /></td>
         </tr>
         <tr class="errorBlock">
             <td></td><td><span id="error1"></span></td>
         </tr>
         <tr>
            <td> <label for="lname">Last Name:</label></td>
-           <td> <input name="employeename"  pattern="[A-Za-z ]*"  id="lname" type="" required></td>
+           <td> <input name="employeename"    id="lname" type=""></td>
         </tr>
         <tr class="errorBlock">
             <td></td><td><span id="error2"></span></td>
