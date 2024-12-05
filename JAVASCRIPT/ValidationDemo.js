@@ -10,17 +10,20 @@ const cpassNode=document.getElementById("cpass");
 const errorNode1=document.getElementById("error1")
 
 // extract value of attribute "value"
-const fname=fnameNode.value;
-const lname=lnameNode.value;
-const mobile=mobileNode.value;
-const age=ageNode.value;
-const email=emailNode.value;
-const pass=passNode.value;
-const cpass=cpassNode.value;
-const requireMessage="This field is required";
-fnameNode.addEventListener('blur', ()=>validate1())
+let fname="";
+let lname="";
+let mobile="";
+let age="";
+let email="";
+let pass="";
+let cpass="";
 
+let requireMessage="This field is required";
+
+fnameNode.addEventListener('keyup', ()=>validate1())
 function validate1(){
+    errorNode1.textContent=""
+    fname=fnameNode.value;
     if(fname=="")
         errorNode1.textContent=requireMessage
 }
