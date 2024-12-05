@@ -6,6 +6,7 @@ const ageNode=document.getElementById("age");
 const emailNode=document.getElementById("email");
 const passNode=document.getElementById("pass");
 const cpassNode=document.getElementById("cpass");
+const formNode=document.getElementById("enrollmentForm");
 
 const errorNode1=document.getElementById("error1")
 const errorNode2=document.getElementById("error2")
@@ -22,6 +23,7 @@ ageNode.addEventListener('keyup', ()=>validate4())
 emailNode.addEventListener('keyup', ()=>validate5())
 passNode.addEventListener('keyup', ()=>validate6())
 cpassNode.addEventListener('keyup', ()=>validate7())
+formNode.addEventListener("submit", ()=>validateAll())
 
 // extract value of attribute "value"
 let fname="";
@@ -135,4 +137,9 @@ function validate7(){
     else{
         cpassNode.style.border=validBorder;
     }
+}
+
+
+function validateAll(){
+    
 }
