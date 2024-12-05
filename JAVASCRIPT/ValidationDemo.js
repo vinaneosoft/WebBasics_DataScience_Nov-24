@@ -101,4 +101,6 @@ function validate7(){
     cpass=cpassNode.value;
     if(cpass=="")
         errorNode7.textContent=requireMessage
+    else if(cpass.valueOf()!=pass.valueOf())
+        errorNode7.textContent="Please match the password"
 }
