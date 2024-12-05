@@ -23,8 +23,6 @@ ageNode.addEventListener('keyup', ()=>validate4())
 emailNode.addEventListener('keyup', ()=>validate5())
 passNode.addEventListener('keyup', ()=>validate6())
 cpassNode.addEventListener('keyup', ()=>validate7())
-formNode.addEventListener("submit", ()=>validateAll())
-
 // extract value of attribute "value"
 let fname="";
 let lname="";
@@ -49,12 +47,17 @@ function validate1(){
     fname=fnameNode.value;
     fnameNode.style.border=invalidBorder;
     //console.log(namePattern.test(fname));
-    if(fname=="")
+    if(fname==""){
         errorNode1.textContent=requireMessage
-    else if(namePattern.test(fname)==false)
+        return false;
+    }
+    else if(namePattern.test(fname)==false){
         errorNode1.textContent="first name must contain only alphabet"
+        return false;
+    }
     else {
         fnameNode.style.border=validBorder;
+        return true;
     }
 
 }
@@ -62,12 +65,17 @@ function validate2(){
     errorNode2.textContent=""
     lnameNode.style.border=invalidBorder;
     lname=lnameNode.value;
-    if(lname=="")
+    if(lname==""){
         errorNode2.textContent=requireMessage
-    else if(namePattern.test(lname)==false)
+        return false;
+    }
+    else if(namePattern.test(lname)==false){
         errorNode2.textContent="last name must contain only alphabet"
+        return false;
+    }
     else{
         lnameNode.style.border=validBorder;
+        return true;
     }
 }
 
@@ -75,12 +83,17 @@ function validate3(){
     errorNode3.textContent=""
     mobileNode.style.border=invalidBorder;
     mobile=mobileNode.value;
-    if(mobile=="")
+    if(mobile==""){
         errorNode3.textContent=requireMessage
-     else if(mobilePattern.test(mobile)==false)
+        return false;
+    }
+    else if(mobilePattern.test(mobile)==false){
         errorNode3.textContent="Please enter valid mobile number"
+        return false;
+    }
     else{
         mobileNode.style.border=validBorder;
+        return true;
     }
 }
 
@@ -88,14 +101,21 @@ function validate4(){
     errorNode4.textContent=""
     ageNode.style.border=invalidBorder;
     age=ageNode.value;
-    if(age=="")
+    if(age==""){
         errorNode4.textContent=requireMessage
-    else if(age<0)
-        errorNode4.textContent="Please enter valid age"
-    else if( age <18  ||  age>45)
-        errorNode4.textContent="only age range 18 to 45 is allowed to enroll"
+        return false;
+    }
+    else if(age<0){
+         errorNode4.textContent="Please enter valid age"
+         return false;
+    }
+    else if( age <18  ||  age>45){
+          errorNode4.textContent="only age range 18 to 45 is allowed to enroll"
+          return false;
+    }
     else{
         ageNode.style.border=validBorder;
+        return true
     }
 }
 
@@ -103,12 +123,17 @@ function validate5(){
     errorNode5.textContent=""
     emailNode.style.border=invalidBorder;
     email=emailNode.value;
-    if(email=="")
+    if(email==""){
         errorNode5.textContent=requireMessage
-    else if (emailPattern.test(email)==false)
-        errorNode5.textContent="Please enter valid email"
+        return false;
+    }
+    else if (emailPattern.test(email)==false){
+         errorNode5.textContent="Please enter valid email"
+         return false;
+    }
     else{
         emailNode.style.border=validBorder;
+        return true;
     }
 }
 
@@ -117,12 +142,17 @@ function validate6(){
     passNode.style.border=invalidBorder;
     pass=passNode.value;
     //console.log(pass);
-    if(pass=="")
+    if(pass==""){
         errorNode6.textContent=requireMessage
-    else if(passwordPattern.test(pass)==false)
-        errorNode6.textContent="password must contain atleast one small alphabet, capital alphabet, digit, special symbol(!#@%&?). password must be 5 to 12 characters long"
+        return false;
+       }
+    else if(passwordPattern.test(pass)==false){
+         errorNode6.textContent="password must contain atleast one small alphabet, capital alphabet, digit, special symbol(!#@%&?). password must be 5 to 12 characters long";
+         return false;
+    }
     else{
         passNode.style.border=validBorder;
+        return true;
     }
 }
 
@@ -130,16 +160,40 @@ function validate7(){
     errorNode7.textContent=""
     cpassNode.style.border=invalidBorder;
     cpass=cpassNode.value;
-    if(cpass=="")
+    if(cpass==""){
         errorNode7.textContent=requireMessage
-    else if(cpass.valueOf()!=pass.valueOf())
+        return false;
+    }
+    else if(cpass.valueOf()!=pass.valueOf()){
         errorNode7.textContent="Please match the password"
+        return false;
+    }
     else{
         cpassNode.style.border=validBorder;
+        return true;
     }
 }
 
-
+function collectCourses(){
+    // for checkboxes
+}
+function collectGender(){
+    // gender
+}
+function collectDeparment(){
+    //department from drop down
+}
 function validateAll(){
+   // console.log("in function ");
+    // if all fields are valid then only return true else return false
+    const state1=validate1();
+    const state2=validate2();
+    const state3=validate3();
+    const state4=validate4();
+    const state5=validate5();
+    const state6=validate6();
+    const state7=validate7();
+    console.log(fname);
     
+    return (state1 && state2 && state3 && state4 && state5 && state6 && state7)
 }
