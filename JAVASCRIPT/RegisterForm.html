@@ -4,14 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
+    <style>
+        #enrollment{
+            display: flex;
+            justify-content: center;
+        }
+        form{
+            border: 6px double green;
+        }
+        form input{
+            height: 20px;
+            width: 300px;
+        }
+        form>div{
+            margin: 10px;
+        }
+        form label{
+            margin-right: 50px;
+        }
+        #header{
+            text-align: center;
+        }
+        form [type="submit"], form [type="reset"]{
+            height: 50px;
+            border-radius: 30px;
+            background: lightblue;
+        }
+    </style>
 </head>
 <body>
-    <form >
-        <input name="employeename" id="fname" pattern="[A-Za-z ]*" placeholder="first name" required /> <!-- type="text"-->
-        <input name="employeename"  title="last name" type="" required><br><br>
-        <label for="mobile">Enter mobile number</label><input type="tel" pattern="[0-9]*"  minlength="10" maxlength="10" id="mobile" required><br><br>
-        <input type="number" placeholder="Enter age" min="20" max="40" title="employee having age between 20 to 40 are allowed" value="22" required><br><br>
-        <input type="email" placeholder="enter email id" required><br><br>
+    <header id="header">
+        <h3>COURSE ENROLLMENT FORM</h3>
+    </header>
+   
+    <article id="enrollment">
+    <form  novalidate>
+        <div>
+            <label for="fname">First Name:</label>
+            <input name="employeename" id="fname" pattern="[A-Za-z ]*" required />
+        </div>
+       <div>
+            <label for="lname">Last Name:</label>
+            <input name="employeename"  id="lname" type="" required>
+       </div>
+        <div>
+            <label for="mobile">Mobile Number:</label>
+            <input type="tel" id="mobile"  pattern="[0-9]*"  minlength="10" maxlength="10" required>
+        </div>
+        <div>
+            <label for="age">Age:</label>
+            <input type="number" id="age"  min="20" max="40" value="22" required>
+        </div>
+        <div>
+            <label for="email">Email Id:</label>
+            <input type="email" id="email"  required>
+        </div>
+<!-- 
         <label for="joindate">Enter joining date</label><input type="date" id="joindate"><br><br>
         <label>Select Courses to Learn</label>
         <input checked required type="checkbox" name="technicalcourses" id="course1" value="webbasics"><label for="course1">Web Basics</label>
@@ -27,38 +75,21 @@
             <option value="php">PHP</option>
             <option value="js"> Javascript</option>
             <option value="js">Data Science</option>
-        </select><br><br>
-        <textarea id="comments" cols="50" placeholder="add extra comments (optional)"></textarea>
-        <input type="text" placeholder="set new password" title="Password must have atleast one small letter, capital letter, digit, symbol()" required pattern="(?=.*\d.*)(?=.*[a-zA-Z].*)(?=.*[@!#\$%&\?].*).{5,10}">
-        <input type="hidden" name="hiddenfield" value="courseregistration"><br><br>
-        <datalist id="flavors">
-            <option>Vanilla</option>
-            <option>Mango</option>
-            <option>Coconut</option>
-            <option>ButterScotch</option>
-        </datalist>
-        <datalist id="flavors2">
-            <option value="vn">Vanilla</option>
-            <option value="mn">Mango</option>
-            <option>Coconut</option>
-            <option>ButterScotch</option>
-        </datalist>
-        <input list="flavors2" placeholder="select flavor from list"><br><br>
-        <datalist id="tickets">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-        </datalist>
-        <h4>UTS Online Ticket Generartion</h4>
-        <label for="count">Select adults</label>
-        <input type="number" list="tickets" id="count">
-        <br><br>
-        <input type="submit" value="ENROLL"> <input type="reset">
+        </select><br><br> -->
+        <div>
+            <label for="pass">Set Password:</label>
+            <input type="password" id="pass"  required pattern="(?=.*\d.*)(?=.*[a-zA-Z].*)(?=.*[@!#\$%&\?].*).{5,10}">
+        </div>
+        <div>
+            <label for="cpass">Confirm Password:</label>
+            <input type="password" id="cpass">
+        </div>
+        <div>
+            <input type="submit" value="ENROLL"> <input type="reset">
+        </div>
+        
     </form>
-    <!-- month, week, color, url, range, hidden-->
+</article>
 </body>
-<!-- we will extract value of every field in javascript
- getElementById, getElementsByName
- we will put dnames in array, sort the array, we will put all departments in option tag using loop-->
+
 </html>
