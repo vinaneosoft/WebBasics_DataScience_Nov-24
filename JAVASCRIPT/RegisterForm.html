@@ -15,13 +15,6 @@
         form input{
            padding: 10px 20px;
         }
-        form>div{
-            margin: 10px;
-          
-        }
-        form label:not(.courselabel){
-            margin-right: 50px;
-        }
         #header{
             text-align: center;
         }
@@ -30,14 +23,13 @@
             border-radius: 30px;
             background: lightblue;
         }
-        #buttons{
-           display: flex;
-           justify-content: center;
-        }
         .errorBlock{
             color: red;
            position: relative;
            left: 80px;
+        }
+        #buttons{
+            text-align: center;
         }
     </style>
 </head>
@@ -47,40 +39,43 @@
     </header>
     <article id="enrollment">
     <form  novalidate>
-        <div>
-            <label for="fname">First Name:</label>
-            <input name="employeename" id="fname" pattern="[A-Za-z ]*" required />
-            <section class="errorBlock">
-                <span id="error1"></span>
-            </section>
-        </div>
-       <div>
-            <label for="lname">Last Name:</label>
-            <input name="employeename"  id="lname" type="" required>
-       </div>
-        <div>
-            <label for="mobile">Mobile Number:</label>
-            <input type="tel" id="mobile"  pattern="[0-9]*"  minlength="10" maxlength="10" required>
-        </div>
-        <div>
-            <label for="age">Age:</label>
-            <input type="number" id="age"  min="20" max="40" value="22" required>
-        </div>
-        <div>
-            <label for="email">Email Id:</label>
-            <input type="email" id="email"  required>
-        </div>
-       <div>
-        <label>Select Courses to Learn:</label>
-        <div>
-            <input checked required type="checkbox" name="technicalcourses" id="course1" value="webbasics">
-            <label class="courselabel" for="course1">Web Basics</label>
-            <input type="checkbox" name="technicalcourses" id="course2" value="angular">
-            <label  class="courselabel" for="course2">Angular</label>
-            <input type="checkbox" name="technicalcourses" id="course3" value="react">
-            <label  class="courselabel" for="course3">React</label>
-        </div>
-       </div>
+        <table>
+        <tr>
+          <td><label for="fname">First Name:</label></td>
+           <td> <input name="employeename" id="fname" pattern="[A-Za-z ]*" required /></td>
+        </tr>
+        <tr class="errorBlock">
+            <td></td><td><span id="error1"></span></td>
+        </tr>
+       <tr>
+           <td> <label for="lname">Last Name:</label></td>
+           <td> <input name="employeename"  id="lname" type="" required></td>
+       </tr>
+        <tr>
+           <td> <label for="mobile">Mobile Number:</label></td>
+           <td> <input type="tel" id="mobile"  pattern="[0-9]*"  minlength="10" maxlength="10" required></td>
+        </tr>
+        <tr>
+            <td><label for="age">Age:</label></td>
+            <td><input type="number" id="age"  min="20" max="40" value="22" required></td>
+        </tr>
+        <tr>
+           <td> <label for="email">Email Id:</label></td>
+           <td> <input type="email" id="email"  required></td>
+        </tr>
+        <tr>
+            <td><label>Select Courses to Learn:</label></td>
+       
+            <td>
+                <input checked required type="checkbox" name="technicalcourses" id="course1" value="webbasics">
+                <label class="courselabel" for="course1">Web Basics</label>
+                <input type="checkbox" name="technicalcourses" id="course2" value="angular">
+                <label  class="courselabel" for="course2">Angular</label>
+                <input type="checkbox" name="technicalcourses" id="course3" value="react">
+                <label  class="courselabel" for="course3">React</label>
+            </td>
+        </tr>
+     
         
        <!--  <br><br>
           <label for="joindate">Enter joining date</label><input type="date" id="joindate"><br><br>
@@ -94,18 +89,18 @@
             <option value="js"> Javascript</option>
             <option value="js">Data Science</option>
         </select><br><br> -->
-        <div>
-            <label for="pass">Set Password:</label>
-            <input type="password" id="pass"  required pattern="(?=.*\d.*)(?=.*[a-zA-Z].*)(?=.*[@!#\$%&\?].*).{5,10}">
-        </div>
-        <div>
-            <label for="cpass">Confirm Password:</label>
-            <input type="password" id="cpass">
-        </div>
-        <div id="buttons">
-            <input type="submit" value="ENROLL"> <input type="reset" value="RESET">
-        </div>
-        
+        <tr>
+           <td> <label for="pass">Set Password:</label></td>
+            <td><input type="password" id="pass"  required pattern="(?=.*\d.*)(?=.*[a-zA-Z].*)(?=.*[@!#\$%&\?].*).{5,10}"></td>
+        </tr>
+        <tr>
+         <td>   <label for="cpass">Confirm Password:</label></td>
+          <td>  <input type="password" id="cpass"></td>
+        </tr>
+        <tr>
+            <td id="buttons" colspan="2"><input type="submit" value="ENROLL"> <input type="reset" value="RESET"></td>
+        </tr>
+    </table>
     </form>
 </article>
 <script src="ValidationDemo.js"></script>
