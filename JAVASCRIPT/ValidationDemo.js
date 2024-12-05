@@ -15,6 +15,14 @@ const errorNode5=document.getElementById("error5")
 const errorNode6=document.getElementById("error6")
 const errorNode7=document.getElementById("error7")
 
+fnameNode.addEventListener('keyup', ()=>validate1())
+lnameNode.addEventListener('keyup', ()=>validate2())
+mobileNode.addEventListener('keyup', ()=>validate3())
+ageNode.addEventListener('keyup', ()=>validate4())
+emailNode.addEventListener('keyup', ()=>validate5())
+passNode.addEventListener('keyup', ()=>validate6())
+cpassNode.addEventListener('keyup', ()=>validate7())
+
 // extract value of attribute "value"
 let fname="";
 let lname="";
@@ -24,15 +32,8 @@ let email="";
 let pass="";
 let cpass="";
 
+//set the commmon messages
 let requireMessage="This field is required";
-
-fnameNode.addEventListener('keyup', ()=>validate1())
-lnameNode.addEventListener('keyup', ()=>validate2())
-mobileNode.addEventListener('keyup', ()=>validate3())
-ageNode.addEventListener('keyup', ()=>validate4())
-emailNode.addEventListener('keyup', ()=>validate5())
-passNode.addEventListener('keyup', ()=>validate6())
-cpassNode.addEventListener('keyup', ()=>validate7())
 
 function validate1(){
     errorNode1.textContent=""
