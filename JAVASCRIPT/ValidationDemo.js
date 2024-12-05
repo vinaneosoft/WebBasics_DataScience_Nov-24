@@ -37,7 +37,8 @@ const requireMessage="This field is required";
 //set patterns
 const namePattern=new RegExp("^[A-Za-z ]*$");
 const mobilePattern=new RegExp("^[0-9]{10}$")
-const passwordPattern=new RegExp("^(?=.*\d.*)(?=.*[a-zA-Z].*)(?=.*[@!#\$%&\?].*).{5,10}$")
+const passwordPattern=new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{5,12}$")
+const emailPattern=new RegExp("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$");
 function validate1(){
     errorNode1.textContent=""
     fname=fnameNode.value;
@@ -70,6 +71,10 @@ function validate4(){
     age=ageNode.value;
     if(age=="")
         errorNode4.textContent=requireMessage
+    else if(age<0)
+        errorNode4.textContent="Please enter valid age"
+    else if( age <18  ||  age>45)
+        errorNode4.textContent="only age range 18 to 45 is allowed to enroll"
 }
 
 function validate5(){
@@ -77,15 +82,18 @@ function validate5(){
     email=emailNode.value;
     if(email=="")
         errorNode5.textContent=requireMessage
+    else if (emailPattern.test(email)==false)
+        errorNode5.textContent="Please enter valid email"
 }
 
 function validate6(){
     errorNode6.textContent=""
     pass=passNode.value;
+    //console.log(pass);
     if(pass=="")
         errorNode6.textContent=requireMessage
     else if(passwordPattern.test(pass)==false)
-        errorNode6.textContent="password must contain atleast one small alphabet, capital alphbet, digit, special symbol(@!#$%&?). password must be 5 to 10 characters long"
+        errorNode6.textContent="password must contain atleast one small alphabet, capital alphabet, digit, special symbol(!#@%&?). password must be 5 to 12 characters long"
 }
 
 function validate7(){

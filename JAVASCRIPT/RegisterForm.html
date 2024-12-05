@@ -12,6 +12,7 @@
         form{
             border: 6px double green;
             padding: 20px;
+            flex-basis: 40%;
         }
         form input{
            padding: 10px 20px;
@@ -102,14 +103,14 @@
         </select><br><br> -->
         <tr>
            <td> <label for="pass">Set Password:</label></td>
-            <td><input type="password" id="pass"  required pattern="(?=.*\d.*)(?=.*[a-zA-Z].*)(?=.*[@!#\$%&\?].*).{5,10}"></td>
+            <td><input type="text" id="pass"  required pattern="(?=.*\d.*)(?=.*[a-zA-Z].*)(?=.*[@!#\$%&\?].*).{5,10}"></td>
         </tr>
         <tr class="errorBlock">
             <td></td><td><span id="error6"></span></td>
         </tr>
         <tr>
             <td><label for="cpass">Confirm Password:</label></td>
-            <td><input type="password" id="cpass"></td>
+            <td><input type="text" id="cpass"></td>
         </tr>
         <tr class="errorBlock">
             <td></td><td><span id="error7"></span></td>
