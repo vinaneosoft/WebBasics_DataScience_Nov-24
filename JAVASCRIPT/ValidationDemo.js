@@ -31,14 +31,13 @@ let age="";
 let email="";
 let pass="";
 let cpass="";
-
 //set the commmon messages
 const requireMessage="This field is required";
 
-
 //set patterns
 const namePattern=new RegExp("^[A-Za-z ]*$");
-
+const mobilePattern=new RegExp("^[0-9]{10}$")
+const passwordPattern=new RegExp("^(?=.*\d.*)(?=.*[a-zA-Z].*)(?=.*[@!#\$%&\?].*).{5,10}$")
 function validate1(){
     errorNode1.textContent=""
     fname=fnameNode.value;
@@ -48,7 +47,6 @@ function validate1(){
     else if(namePattern.test(fname)==false)
         errorNode1.textContent="first name must contain only alphabet"
 }
-
 function validate2(){
     errorNode2.textContent=""
     lname=lnameNode.value;
@@ -63,6 +61,8 @@ function validate3(){
     mobile=mobileNode.value;
     if(mobile=="")
         errorNode3.textContent=requireMessage
+     else if(mobilePattern.test(mobile)==false)
+        errorNode3.textContent="Please enter valid mobile number"
 }
 
 function validate4(){
@@ -84,6 +84,8 @@ function validate6(){
     pass=passNode.value;
     if(pass=="")
         errorNode6.textContent=requireMessage
+    else if(passwordPattern.test(pass)==false)
+        errorNode6.textContent="password must contain atleast one small alphabet, capital alphbet, digit, special symbol(@!#$%&?). password must be 5 to 10 characters long"
 }
 
 function validate7(){
