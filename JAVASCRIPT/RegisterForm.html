@@ -17,6 +17,7 @@
         }
         form>div{
             margin: 10px;
+          
         }
         form label:not(.courselabel){
             margin-right: 50px;
@@ -33,6 +34,11 @@
            display: flex;
            justify-content: center;
         }
+        .errorBlock{
+            color: red;
+           position: relative;
+           left: 80px;
+        }
     </style>
 </head>
 <body>
@@ -44,6 +50,9 @@
         <div>
             <label for="fname">First Name:</label>
             <input name="employeename" id="fname" pattern="[A-Za-z ]*" required />
+            <section class="errorBlock">
+                <span id="error1"></span>
+            </section>
         </div>
        <div>
             <label for="lname">Last Name:</label>
@@ -99,6 +108,7 @@
         
     </form>
 </article>
+<script src="ValidationDemo.js"></script>
 </body>
 
 </html>
