@@ -33,13 +33,20 @@ let pass="";
 let cpass="";
 
 //set the commmon messages
-let requireMessage="This field is required";
+const requireMessage="This field is required";
+
+
+//set patterns
+const namePattern=new RegExp("^[A-Za-z ]*$");
 
 function validate1(){
     errorNode1.textContent=""
     fname=fnameNode.value;
+    //console.log(namePattern.test(fname));
     if(fname=="")
         errorNode1.textContent=requireMessage
+    else if(namePattern.test(fname)==false)
+        errorNode1.textContent="first name must contain only alphabet"
 }
 
 function validate2(){
@@ -47,6 +54,8 @@ function validate2(){
     lname=lnameNode.value;
     if(lname=="")
         errorNode2.textContent=requireMessage
+    else if(namePattern.test(lname)==false)
+        errorNode2.textContent="last name must contain only alphabet"
 }
 
 function validate3(){
