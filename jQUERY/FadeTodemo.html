@@ -9,14 +9,21 @@
             display: none;
         }
     </style>
-</head>
-<body>
-    <img id="img1" src="../CSS/Images/nature.jpg" alt="nature">
-    <img id="img2" src="../CSS/Images/nature.jpg" alt="nature">
+
     <script src="./Scripts/jquery-3.7.1.min.js"></script>
     <script>
-        $("#img1").fadeTo(3000, 0.5);
-        $("#img2").fadeTo(3000, 0.5);
+       $(document).ready(function(){
+            $("#img1,div").fadeTo(3000, 0.5);
+            $("#img2").fadeTo(3000, 0.5);
+       });
     </script>
+</head>
+<body >
+    <img id="img1" src="../CSS/Images/nature.jpg" alt="nature">
+    <img id="img2" src="../CSS/Images/nature.jpg" alt="nature">
+    <div>
+        HI
+    </div>
+   
 </body>
 </html>

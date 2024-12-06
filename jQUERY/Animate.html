@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        .block{
+            height: 200px;
+            width: 200px;
+            background: lightgreen;
+            border: 4px double darkorange;
+        }
+        button{
+            padding: 5px 20px;
+            background: lightblue;
+        }
+    </style>
+    <script src="./Scripts/jquery-3.7.1.min.js"></script>
+    <script>
+        const animateObject1={
+            height:"400px",
+            width:"500px"
+        }
+        const animateObject2={
+           borderRadius:"30px",
+           margin:"50px"
+        }
+
+        $(document).ready(function(){
+            $("#block1").mouseover(function(){
+                $(this).animate(animateObject1,4000,"swing");
+            });
+            $("#block1").mouseout(function(){
+                $(this).animate(animateObject2,"fast");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="block" id="block1">
+        INDIA
+    </div>
+</body>
+</html>
