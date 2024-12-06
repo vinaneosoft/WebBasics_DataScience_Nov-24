@@ -6,24 +6,26 @@
     <title>CRUD2</title>
 </head>
 <body>
-    
+    <script src="./Scripts/jquery-3.7.1.min.js"></script>
     <script>
-
         const snacks=['bread omlet', 'pohe', 'upma', 'vada sambar']
-        const olNode=document.createElement('ol')
+        const olNode=$('<ol>')
+        olNode.attr("id","indiansnacks")
+        olNode.attr("class","snacks")
 
         for(let item of snacks){
-            const liNode = document.createElement('li');
-            liNode.textContent=item;  // new way
+            const liNode = $('<li>');
+            liNode.text(item);  // new way
             olNode.append(liNode); 
         }
 
-        document.body.append(olNode);
+        $("body").prepend(olNode);
 
-        const h3Node=document.createElement('h3');
-        const textNode=document.createTextNode("SNACKS"); // old way
-        h3Node.append(textNode);
+        const h3Node=$('<h3>');
+        h3Node.attr("id","olheading")
+        h3Node.text("SNACKS")
         olNode.before(h3Node)
+        /*remove heading on button click*/
     </script>
 </body>
 </html>
