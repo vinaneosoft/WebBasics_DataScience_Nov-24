@@ -6,7 +6,7 @@
     <title>Jquery Selectors</title>
 </head>
 <body>
-    <h3>SELECTORS</h3>
+    <h3 id="htag">SELECTORS</h3>
     <section>
         <p  class="lorem">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum, architecto dignissimos! Omnis perspiciatis, ea quo fugit suscipit enim libero! Deserunt consequatur, 
@@ -20,6 +20,8 @@
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum, architecto dignissimos! Omnis perspiciatis, ea quo fugit suscipit enim libero! Deserunt consequatur, 
             laudantium nam inventore ducimus illum nostrum ipsum fuga vel!
         </p>
+        <b id="btag" class="lorem">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat vitae quibusdam necessitatibus ut dolorum non numquam aliquam explicabo sequi facilis molestiae, 
+            quidem facere eaque labore eos voluptatem aperiam reiciendis animi.</b>
         <div>
             <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum, architecto dignissimos! Omnis perspiciatis, ea quo fugit suscipit enim libero! Deserunt consequatur, 
@@ -27,6 +29,21 @@
             </p>
         </div>
     </section>
-   
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla veritatis nisi minus pariatur suscipit! Quam est, deserunt odio necessitatibus, suscipit facilis labore
+         voluptatem deleniti modi obcaecati eveniet veniam saepe. Exercitationem.
+         <input type="text" placeholder="Enter your name">;
+         <input type="number" placeholder="Enter your age">;
+    </p>
+    <script src="./Scripts/jquery-3.7.1.min.js"></script>
+    <script>
+        console.log($(".lorem"));
+        console.log($("p"));
+        console.log($("section>p"));
+        console.log($("section p"));
+        console.log($("section p"));
+        console.log($("#btag, #htag"));
+        /*select the input text field using attribute selector*/
+    </script>
 </body>
 </html>
