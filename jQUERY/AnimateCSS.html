@@ -10,6 +10,7 @@
             width: 200px;
             background: lightgreen;
             border: 4px double darkorange;
+            padding: 20px;
         }
         button{
             padding: 5px 20px;
@@ -18,27 +19,38 @@
     </style>
     <script src="./Scripts/jquery-3.7.1.min.js"></script>
     <script>
-        const animateObject1={
-            height:"400px",
-            width:"500px"
+        const styleObject1={
+            height:"300px",
+            width:"300px"
         }
-        const animateObject2={
+        const styleObject2={
            borderRadius:"30px",
-           margin:"50px"
+           margin:"50px",
+           color:"red",
+           background:"pink"
         }
 
         $(document).ready(function(){
             $("#block1").mouseover(function(){
-                $(this).animate(animateObject1,4000,"swing");
+                $(this).animate(styleObject1,4000,"swing"); // effect function
             });
             $("#block1").mouseout(function(){
-                $(this).animate(animateObject2,"fast");
+                $(this).animate(styleObject2,"fast");
+            });
+            $("#block2").mouseover(function(){
+                $(this).css(styleObject1);  // styling function
+            });
+            $("#block2").mouseout(function(){
+                $(this).css(styleObject2);  // styling function
             });
         });
     </script>
 </head>
 <body>
     <div class="block" id="block1">
+        INDIA
+    </div>
+    <div class="block" id="block2">
         INDIA
     </div>
 </body>
