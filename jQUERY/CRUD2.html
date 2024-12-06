@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD2</title>
+</head>
+<body>
+    
+    <script>
+
+        const snacks=['bread omlet', 'pohe', 'upma', 'vada sambar']
+        const olNode=document.createElement('ol')
+
+        for(let item of snacks){
+            const liNode = document.createElement('li');
+            liNode.textContent=item;  // new way
+            olNode.append(liNode); 
+        }
+
+        document.body.append(olNode);
+
+        const h3Node=document.createElement('h3');
+        const textNode=document.createTextNode("SNACKS"); // old way
+        h3Node.append(textNode);
+        olNode.before(h3Node)
+    </script>
+</body>
+</html>
