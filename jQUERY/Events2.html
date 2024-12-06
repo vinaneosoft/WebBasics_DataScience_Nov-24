@@ -51,21 +51,14 @@
             else
                 passNode.attr("type","password")
         }
-
         // convert all below code in jquery
-        const radioNodes=document.getElementsByName("gender");
-        for(let radioNode of radioNodes){
-            radioNode.addEventListener('change', ()=>selectGender())
-        }
+        const radioNodes=$("input[name='gender']");
         let gender="";
-        function  selectGender(){
-            for(let radioNode of radioNodes){
-                if(radioNode.checked){
-                   gender=radioNode.value;   // val()
-                   console.log(radioNode.value);
-                }
-            }
-        }
+        radioNodes.change(function(){
+            $(this).prop("checked")
+                gender=$(this).val();
+             console.log(gender);
+        })
     </script>
 </body>
 </html>

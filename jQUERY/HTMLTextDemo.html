@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnerHTML TEXT Demo</title>
+</head>
+<body>
+    <p id="india">India is my country
+        <small>India is my country</small>
+        <b>I love my <i>country</i> India </b>
+    </p>
+    <button id="pastebtn">PASTE</button>
+    <p id="blank1">
+
+    </p>
+    <p id="blank2">
+
+    </p>
+    <p id="blank3">
+
+    </p>
+    <p id="blank4">
+
+    </p>
+    <script>
+        const pNode=document.getElementById("india");
+        console.log(pNode.textContent);
+        console.log(pNode.innerText);
+        console.log(pNode.innerHTML);
+        const pNode2=document.getElementById("blank1")
+        const pNode3=document.getElementById("blank2")
+        const pNode4=document.getElementById("blank3")
+        const pNode5=document.getElementById("blank4")
+        document.getElementById("pastebtn").addEventListener("click", ()=>{
+            pNode2.text(pNode.text());
+            pNode3.innerText=pNode.innerText;
+            pNode4.innerHTML=pNode.innerHTML;
+            pNode5.innerHTML="<b>"+pNode.textContent+"</b>"
+            pNode5.innerHTML=`<b>${pNode.textContent}</b>`
+        })
+        // extract text from "india" para and add that text all in bold in "blank4" para
+    </script>
+</body>
+</html>
