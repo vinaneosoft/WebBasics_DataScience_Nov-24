@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         figure{
+            border: 2px double darkblue;
+            display: inline-block;
+        }
+        figure,figure img{
+            width:300px
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <figure class="nature" id="nature1">
+            <img src="../CSS/Images/nature.jpg" alt="nature">
+            <figcaption>beautiful nature image</figcaption>
+        </figure>
+        <figure class="nature" id="nature2">
+            <img src="../CSS/Images/nature.jpg" alt="nature">
+            <figcaption>beautiful nature image</figcaption>
+        </figure>
+        <figure id="nature3">
+            <img src="../CSS/Images/nature.jpg" alt="nature">
+            <figcaption>beautiful nature image</figcaption>
+        </figure>
+    </div>
+    <script src="./Scripts/jquery-3.7.1.min.js"></script>
+    <script>
+        $("figure").hide(2000, ()=>{
+            $("figure").show(1000);
+        }) 
+        /*if u r using arrow functions as a callback then do not use this*/
+       /*when we want to apply effects on same selection in sequence*/
+        $("figure").hide(2000).show(1000).fadeOut(500).fadeIn(500);
+    </script>
+</body>
+</html>
