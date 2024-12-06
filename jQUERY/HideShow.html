@@ -12,11 +12,21 @@
         figure,figure img{
             width:300px
         }
+        button{
+            padding: 20px;
+            background: lightcoral;
+            border-radius: 10px;
+        }
+        h2{
+            background: yellow;
+        }
     </style>
 </head>
 <body>
+    <h2>HIDE SHOW CALLBACK</h2>
     <div>
         <button type="button" id="btn">HIDE</button>
+        <button type="button" id="togglebtn">TOGGLE HIDE-SHOW</button>
         <button type="button" id="btn2">CALLBACK</button>
     </div>
     <div>
@@ -33,25 +43,37 @@
             <figcaption>beautiful nature image</figcaption>
         </figure>
     </div>
+    <p>this para position will get changed...</p>
     <script src="./Scripts/jquery-3.7.1.min.js"></script>
     <script>
     /*     event methods/ functions : click, mouseover, keyup, keydown, focus, blur...... */
     /* effect methods/functions : hide, show, toggle, fadeInt, fadeOut.........*/   
    $("#btn").click(function(){
-        $("figure").hide(2000, function(){
-           // window.alert("HIDE COMPLETED.....")
-        });
+        if($("#btn").text()=="HIDE"){
+            $("figure").hide(2000, function(){
+                $("#btn").text("SHOW")
+            });
+        }
+       else{
+            $("figure").show(3000, function(){
+                $("#btn").text("HIDE")
+            });
+        }
    });
+$("#togglebtn").click(function(){
+    $("figure").toggle(2000,);
+});
 
 $("#btn2").click(function(){
     $('#nature1').hide(1000,function(){
-        $('#nature2').hide(1000,function(){
-            $('#nature3').hide(1000,function(){
+        $('#nature2').hide(500,function(){
+            $('#nature3').hide(3000,function(){
                 window.alert('Hide executed')
             })
         })
     })
 })
+window.setTimeout(()=>$("h2").hide(2000), 3000);
 /* $("#btn2").click(()=>$('#nature1').hide(1000,()=>$('#nature2').hide(1000,()=>$('#nature3').hide(1000,()=>window.alert('Hide executed'))))); */
   
     </script>
