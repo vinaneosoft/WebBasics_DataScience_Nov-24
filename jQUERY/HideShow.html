@@ -7,7 +7,10 @@
     <style>
         figure{
             border: 2px double darkblue;
-            float: left;
+            display: inline-block;
+        }
+        figure,figure img{
+            width:300px
         }
     </style>
 </head>
@@ -24,14 +27,21 @@
             <img src="../CSS/Images/nature.jpg" alt="nature">
             <figcaption>beautiful nature image</figcaption>
         </figure>
+        <figure id="nature3">
+            <img src="../CSS/Images/nature.jpg" alt="nature">
+            <figcaption>beautiful nature image</figcaption>
+        </figure>
     </div>
     <script src="./Scripts/jquery-3.7.1.min.js"></script>
     <script>
     /*     event methods/ functions : click, mouseover, keyup, keydown, focus, blur...... */
     /* effect methods/functions : hide, show, toggle, fadeInt, fadeOut.........*/   
    $("#btn").click(function(){
-        $("figure").hide(1000);
+        $("#nature1").hide(2000, function(){
+            window.alert("HIDE COMPLETED.....")
+        });
    });
+   /*class selector, id selector*/
     </script>
 </body>
 </html>
