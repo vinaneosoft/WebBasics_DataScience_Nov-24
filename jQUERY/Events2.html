@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Element by Name and ID</title>
+</head>
+<body>
+    <form>
+        <label for="fname">First Name : </label>
+        <input type="text" name="common-name" id="fname"><br><br>
+        <label for="mname">Middle Name : </label>
+        <input type="text" name="common-name"  id="mname"><br><br>
+        <label for="lname">Last Name : </label>
+        <input type="text" name="common-name"  id="lname"><br><br>
+        <input type="password" placeholder="enter your password" id="pass">
+        <input type="checkbox" id="showp"> <label for="showp">:Show password</label><br><br>
+        <label>Select Gender</label>
+        <input type="radio" name="gender"  id="gender1" value="male"><label for="gender1">MALE</label>
+        <input type="radio" name="gender"  id="gender2" value="female"><label for="gender2">FEMALE</label> <br><br>
+    </form>
+
+    <script src="./Scripts/jquery-3.7.1.min.js"></script>
+    <script>
+        const oldBorder="2px solid blue";
+        const focusBorder="5px double blue";
+
+        $("#fname").css("backgroundColor","lightpink");
+        $("#mname").css("backgroundColor","lightgreen")
+        $("#lname").css("background-color","lightblue")
+
+        const cname = $("input[name='common-name']")
+        cname.css("border",oldBorder);
+
+        cname.focus(function(){
+            $(this).css("border",focusBorder );
+        });
+        cname.blur(function(){
+            $(this).css("border",oldBorder );
+        });
+
+        const passNode=$("#pass"); 
+        console.log(passNode.attr("placeholder")); 
+        passNode.attr("placeholder","password");
+
+        $("#showp").change(()=>togglePass());
+        function togglePass(){
+           // console.log( $("#showp").prop("checked")); 
+            if($("#showp").prop("checked"))
+                passNode.attr("type","text")
+            else
+                passNode.attr("type","password")
+        }
+        const radioNodes=document.getElementsByName("gender");
+        for(let radioNode of radioNodes){
+            radioNode.addEventListener('change', ()=>selectGender())
+        }
+        let gender="";
+        function  selectGender(){
+            for(let radioNode of radioNodes){
+                if(radioNode.checked){
+                   gender=radioNode.value;
+                   console.log(radioNode.value);
+                }
+            }
+        }
+    </script>
+</body>
+</html>

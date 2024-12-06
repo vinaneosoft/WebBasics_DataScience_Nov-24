@@ -31,10 +31,11 @@
     </div>
     <script src="./Scripts/jquery-3.7.1.min.js"></script>
     <script>
-        $("figure").hide(2000, ()=>{
+           /*if u r using arrow functions as a callback then do not use this*/
+     /*    $("figure").hide(2000, ()=>{
             $("figure").show(1000);
-        }) 
-        /*if u r using arrow functions as a callback then do not use this*/
+        })  */
+     
        /*when we want to apply effects on same selection in sequence*/
         $("figure").hide(2000).show(1000).fadeOut(500).fadeIn(500);
     </script>
