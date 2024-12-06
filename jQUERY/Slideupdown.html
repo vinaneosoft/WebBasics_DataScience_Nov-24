@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIDE SHOW</title>
+    <style>
+        figure{
+            border: 2px double darkblue;
+        }
+        figure,figure img{
+            width:300px
+        }
+        button{
+            padding: 20px;
+            background: lightcoral;
+            border-radius: 10px;
+        }
+        h2{
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h2>SLIDE UP DOWN  CALLBACK</h2>
+    <div>
+        <button type="button" id="btn">SLIDE UP</button>
+        <button type="button" id="togglebtn">SLIDE TOGGLE UP-DOWN</button>
+        <button type="button" id="btn2">CALLBACK</button>
+    </div>
+    <div>
+        <figure class="nature" id="nature1">
+            <img src="../CSS/Images/nature.jpg" alt="nature">
+            <figcaption>beautiful nature image</figcaption>
+        </figure>
+        <figure class="nature" id="nature2">
+            <img src="../CSS/Images/nature.jpg" alt="nature">
+            <figcaption>beautiful nature image</figcaption>
+        </figure>
+        <figure id="nature3">
+            <img src="../CSS/Images/nature.jpg" alt="nature">
+            <figcaption>beautiful nature image</figcaption>
+        </figure>
+    </div>
+    <p>this para position will get changed...</p>
+    <script src="./Scripts/jquery-3.7.1.min.js"></script>
+    <script>
+    /*     event methods/ functions : click, mouseover, keyup, keydown, focus, blur...... */
+    /* effect methods/functions : hide, show, toggle, fadeInt, fadeOut.........*/   
+   $("#btn").click(function(){
+        if($("#btn").text()=="SLIDE UP"){
+            $("figure").slideUp(500, function(){
+                $("#btn").text("SLIDE DOWN")
+            });
+        }
+       else{
+            $("figure").slideDown(700, function(){
+                $("#btn").text("SLIDE UP")
+            });
+        }
+   });
+$("#togglebtn").click(function(){
+    $("figure").slideToggle(1000);
+});
+
+$("#btn2").click(function(){
+    $('#nature1').slideUp(1000,function(){
+        $('#nature2').slideUp(500,function(){
+            $('#nature3').slideUp(3000,function(){
+                window.alert('slideUp executed')
+            })
+        })
+    })
+})
+window.setTimeout(()=>$("h2").hide(2000), 3000);
+/* $("#btn2").click(()=>$('#nature1').hide(1000,()=>$('#nature2').hide(1000,()=>$('#nature3').hide(1000,()=>window.alert('Hide executed'))))); */
+  
+    </script>
+</body>
+</html>
