@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIDE SHOW</title>
+    <style>
+        figure{
+            border: 2px double darkblue;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button type="button" id="btn">HIDE</button>
+    </div>
+    <div>
+        <figure class="nature" id="nature1">
+            <img src="../CSS/Images/nature.jpg" alt="nature">
+            <figcaption>beautiful nature image</figcaption>
+        </figure>
+        <figure class="nature" id="nature2">
+            <img src="../CSS/Images/nature.jpg" alt="nature">
+            <figcaption>beautiful nature image</figcaption>
+        </figure>
+    </div>
+    <script src="./Scripts/jquery-3.7.1.min.js"></script>
+    <script>
+    /*     event methods/ functions : click, mouseover, keyup, keydown, focus, blur...... */
+    /* effect methods/functions : hide, show, toggle, fadeInt, fadeOut.........*/   
+   $("#btn").click(function(){
+        $("figure").hide(1000);
+   });
+    </script>
+</body>
+</html>
