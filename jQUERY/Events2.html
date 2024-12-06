@@ -51,6 +51,8 @@
             else
                 passNode.attr("type","password")
         }
+
+        // convert all below code in jquery
         const radioNodes=document.getElementsByName("gender");
         for(let radioNode of radioNodes){
             radioNode.addEventListener('change', ()=>selectGender())
@@ -59,7 +61,7 @@
         function  selectGender(){
             for(let radioNode of radioNodes){
                 if(radioNode.checked){
-                   gender=radioNode.value;
+                   gender=radioNode.value;   // val()
                    console.log(radioNode.value);
                 }
             }
