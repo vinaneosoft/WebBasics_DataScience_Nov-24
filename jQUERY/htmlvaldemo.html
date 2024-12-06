@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTMLTEXT</title>
+    <style>
+        section{
+            display: flex;
+        }
+        section>div{
+            border: 2px solid red;
+            height: 100px;
+            width: 100px;
+        }
+    </style>
 </head>
 <body>
     <textarea id="ta1">
@@ -13,12 +23,27 @@
     <textarea id="ta2">
 
     </textarea>
-    <input type="text" id="sender"><button>=></button>
+    <input type="text" id="sender"><button id="sendbtn">=></button>
     <input type="text" id="receiver">
+    <section>
+        <div id="block1">
+              <b> INDIA IS MY COUNTRY</b>
+        </div>
+        <button id="passbtn">=></button>
+        <div id="block2">
+    
+        </div>
+    </section>
     <script src="./Scripts/jquery-3.7.1.min.js"></script>
     <script>
         $("#shiftbtn").click(function(){
-
+            $("#ta2").val($("#ta1").val());
+        })
+        $("#sendbtn").click(function(){
+            $("#receiver").val($("#sender").val());
+        })
+        $("#passbtn").click(function(){
+            $("#block2").html($("#block1").html());
         })
     </script>
 </body>
