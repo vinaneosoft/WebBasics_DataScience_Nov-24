@@ -1,29 +1,29 @@
 // extract  each node using id
-const fnameNode=document.getElementById("fname");
-const lnameNode=document.getElementById("lname");
-const mobileNode=document.getElementById("mobile");
-const ageNode=document.getElementById("age");
-const emailNode=document.getElementById("email");
-const passNode=document.getElementById("pass");
-const cpassNode=document.getElementById("cpass");
-const formNode=document.getElementById("enrollmentForm");
+const fnameNode=$("#fname");
+const lnameNode=$("#lname");
+const mobileNode=$("#mobile");
+const ageNode=$("#age");
+const emailNode=$("#email");
+const passNode=$("#pass");
+const cpassNode=$("#cpass");
+const formNode=$("#enrollmentForm");
 
-const errorNode1=document.getElementById("error1")
-const errorNode2=document.getElementById("error2")
-const errorNode3=document.getElementById("error3")
-const errorNode4=document.getElementById("error4")
-const errorNode5=document.getElementById("error5")
-const errorNode6=document.getElementById("error6")
-const errorNode7=document.getElementById("error7")
+const errorNode1=$("#error1")
+const errorNode2=$("#error2")
+const errorNode3=$("#error3")
+const errorNode4=$("#error4")
+const errorNode5=$("#error5")
+const errorNode6=$("#error6")
+const errorNode7=$("#error7")
 
-fnameNode.addEventListener('keyup', ()=>validate1())
-lnameNode.addEventListener('keyup', ()=>validate2())
-mobileNode.addEventListener('keyup', ()=>validate3())
-ageNode.addEventListener('keyup', ()=>validate4())
-emailNode.addEventListener('keyup', ()=>validate5())
-passNode.addEventListener('keyup', ()=>validate6())
-cpassNode.addEventListener('keyup', ()=>validate7())
-// extract value of attribute "value"
+fnameNode.keyup(()=>validate1())
+lnameNode.on('keyup', ()=>validate2())
+mobileNode.on('keyup', ()=>validate3())
+ageNode.on('keyup', ()=>validate4())
+emailNode.on('keyup', ()=>validate5())
+passNode.on('keyup', ()=>validate6())
+cpassNode.on('keyup', ()=>validate7())
+
 let fname="";
 let lname="";
 let mobile="";
