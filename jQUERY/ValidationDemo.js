@@ -188,3 +188,17 @@ function validateAll(){
     
     return (state1 && state2 && state3 && state4 && state5 && state6 && state7)
 }
+
+const checkNodes= $("input[name='technicalcourses']");
+let courses=[];
+checkNodes.change(()=>collectCourses())
+console.log(checkNodes);
+function collectCourses(){
+    courses=[]
+    checkNodes.each(function(i, node){
+       // console.log(node); // normal javascript node
+        if(node.checked)
+            courses.push(node.value);
+    });
+    console.log(courses);
+}
