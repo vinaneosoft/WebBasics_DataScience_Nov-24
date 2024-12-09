@@ -24,6 +24,8 @@ emailNode.on('keyup', ()=>validate5())
 passNode.on('keyup', ()=>validate6())
 cpassNode.on('keyup', ()=>validate7())
 
+formNode.on("submit", ()=>validateAll())
+
 let fname="";
 let lname="";
 let mobile="";
@@ -33,155 +35,144 @@ let pass="";
 let cpass="";
 //set the commmon messages
 const requireMessage="This field is required";
-
 //set patterns
 const namePattern=new RegExp("^[A-Za-z ]*$");
 const mobilePattern=new RegExp("^[0-9]{10}$")
 const passwordPattern=new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{5,12}$")
 const emailPattern=new RegExp("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$");
-
 const invalidBorder="4px solid red";
 const validBorder="4px solid green";
+
 function validate1(){
-    errorNode1.textContent=""
-    fname=fnameNode.value;
-    fnameNode.style.border=invalidBorder;
+    errorNode1.text("");
+    fname=fnameNode.val();
+    fnameNode.css("border",invalidBorder);
     //console.log(namePattern.test(fname));
     if(fname==""){
-        errorNode1.textContent=requireMessage
+        errorNode1.text("requireMessage");
         return false;
     }
     else if(namePattern.test(fname)==false){
-        errorNode1.textContent="first name must contain only alphabet"
+        errorNode1.text("first name must contain only alphabet")
         return false;
     }
     else {
-        fnameNode.style.border=validBorder;
+        fnameNode.css({border:validBorder})
         return true;
     }
 
 }
 function validate2(){
-    errorNode2.textContent=""
-    lnameNode.style.border=invalidBorder;
-    lname=lnameNode.value;
+    errorNode2.text("");
+    lnameNode.css("border",invalidBorder);
+    lname=lnameNode.val();
     if(lname==""){
-        errorNode2.textContent=requireMessage
+        errorNode2.text(requireMessage)
         return false;
     }
     else if(namePattern.test(lname)==false){
-        errorNode2.textContent="last name must contain only alphabet"
+        errorNode2.text("last name must contain only alphabet")
         return false;
     }
     else{
-        lnameNode.style.border=validBorder;
+        lnameNode.css("border",validBorder)
         return true;
     }
 }
 
 function validate3(){
-    errorNode3.textContent=""
-    mobileNode.style.border=invalidBorder;
-    mobile=mobileNode.value;
+    errorNode3.text("")
+    mobileNode.css("border",invalidBorder);
+    mobile=mobileNode.val();
     if(mobile==""){
-        errorNode3.textContent=requireMessage
+        errorNode3.text(requireMessage)
         return false;
     }
     else if(mobilePattern.test(mobile)==false){
-        errorNode3.textContent="Please enter valid mobile number"
+        errorNode3.text("Please enter valid mobile number")
         return false;
     }
     else{
-        mobileNode.style.border=validBorder;
+        mobileNode.css("border",validBorder)
         return true;
     }
 }
 
 function validate4(){
-    errorNode4.textContent=""
-    ageNode.style.border=invalidBorder;
-    age=ageNode.value;
+    errorNode4.text("")
+    ageNode.css("border",invalidBorder);
+    age=ageNode.val();
     if(age==""){
-        errorNode4.textContent=requireMessage
+        errorNode4.text(requireMessage)
         return false;
     }
     else if(age<0){
-         errorNode4.textContent="Please enter valid age"
+         errorNode4.text("Please enter valid age")
          return false;
     }
     else if( age <18  ||  age>45){
-          errorNode4.textContent="only age range 18 to 45 is allowed to enroll"
+          errorNode4.text("only age range 18 to 45 is allowed to enroll")
           return false;
     }
     else{
-        ageNode.style.border=validBorder;
+        ageNode.css("border",validBorder)
         return true
     }
 }
 
 function validate5(){
-    errorNode5.textContent=""
-    emailNode.style.border=invalidBorder;
-    email=emailNode.value;
+    errorNode5.text("")
+    emailNode.css("border",invalidBorder);
+    email=emailNode.val();
     if(email==""){
-        errorNode5.textContent=requireMessage
+        errorNode5.text(requireMessage)
         return false;
     }
     else if (emailPattern.test(email)==false){
-         errorNode5.textContent="Please enter valid email"
+         errorNode5.text("Please enter valid email")
          return false;
     }
     else{
-        emailNode.style.border=validBorder;
+        emailNode.css("border",validBorder)
         return true;
     }
 }
 
 function validate6(){
-    errorNode6.textContent=""
-    passNode.style.border=invalidBorder;
-    pass=passNode.value;
+    errorNode6.text("")
+    passNode.css("border",invalidBorder);
+    pass=passNode.val();
     //console.log(pass);
     if(pass==""){
-        errorNode6.textContent=requireMessage
+        errorNode6.text(requireMessage)
         return false;
        }
     else if(passwordPattern.test(pass)==false){
-         errorNode6.textContent="password must contain atleast one small alphabet, capital alphabet, digit, special symbol(!#@%&?). password must be 5 to 12 characters long";
+         errorNode6.text("password must contain atleast one small alphabet, capital alphabet, digit, special symbol(!#@%&?). password must be 5 to 12 characters long");
          return false;
     }
     else{
-        passNode.style.border=validBorder;
+        passNode.css("border",validBorder)
         return true;
     }
 }
 
 function validate7(){
-    errorNode7.textContent=""
-    cpassNode.style.border=invalidBorder;
-    cpass=cpassNode.value;
+    errorNode7.text("")
+    cpassNode.css("border",invalidBorder);
+    cpass=cpassNode.val();
     if(cpass==""){
-        errorNode7.textContent=requireMessage
+        errorNode7.text(requireMessage)
         return false;
     }
     else if(cpass.valueOf()!=pass.valueOf()){
-        errorNode7.textContent="Please match the password"
+        errorNode7.text("Please match the password")
         return false;
     }
     else{
-        cpassNode.style.border=validBorder;
+        cpassNode.css("border",validBorder)
         return true;
     }
-}
-
-function collectCourses(){
-    // for checkboxes
-}
-function collectGender(){
-    // gender
-}
-function collectDeparment(){
-    //department from drop down
 }
 function validateAll(){
    // console.log("in function ");
