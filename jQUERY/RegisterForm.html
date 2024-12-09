@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        #enrollment{
+            display: flex;
+            justify-content: center;
+        }
+        form{
+            border: 6px double green;
+            padding: 20px;
+            flex-basis: 40%;
+        }
+        form input{
+           padding: 10px 20px;
+        }
+        #header{
+            text-align: center;
+        }
+        form [type="submit"], form [type="reset"]{
+            height: 50px;
+            border-radius: 30px;
+            background: lightblue;
+        }
+        .errorBlock{
+            color: red;
+        }
+        #buttons{
+            text-align: center;
+        }
+     /*    input:valid{
+            border: 2px solid green;
+        }
+        input:invalid{
+            border: 2px solid red;
+        } */
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h3>COURSE ENROLLMENT FORM</h3>
+    </header>
+    <article id="enrollment">
+    <form onsubmit="return validateAll()"   id="enrollmentForm"  novalidate>
+        <table>
+        <tr>
+          <td><label for="fname">First Name:</label></td>
+           <td> <input name="employeename" id="fname" /></td>
+        </tr>
+        <tr class="errorBlock">
+            <td></td><td><span id="error1"></span></td>
+        </tr>
+        <tr>
+           <td> <label for="lname">Last Name:</label></td>
+           <td> <input name="employeename"    id="lname" type=""></td>
+        </tr>
+        <tr class="errorBlock">
+            <td></td><td><span id="error2"></span></td>
+        </tr>
+        <tr>
+           <td> <label for="mobile">Mobile Number:</label></td>
+           <td> <input type="tel" id="mobile"  pattern="[0-9]*"  minlength="10" maxlength="10" required></td>
+        </tr>
+        <tr class="errorBlock">
+            <td></td><td><span id="error3"></span></td>
+        </tr>
+        <tr>
+            <td><label for="age">Age:</label></td>
+            <td><input type="number" id="age"  min="20" max="40" value="22" required></td>
+        </tr>
+        <tr class="errorBlock">
+            <td></td><td><span id="error4"></span></td>
+        </tr>
+        <tr>
+           <td> <label for="email">Email Id:</label></td>
+           <td> <input type="email" id="email"  required></td>
+        </tr>
+        <tr class="errorBlock">
+            <td></td><td><span id="error5"></span></td>
+        </tr>
+        <tr>
+            <td><label>Select Courses to Learn:</label></td>
+       
+            <td>
+                <input checked required type="checkbox" name="technicalcourses" id="course1" value="webbasics">
+                <label class="courselabel" for="course1">Web Basics</label>
+                <input type="checkbox" name="technicalcourses" id="course2" value="angular">
+                <label  class="courselabel" for="course2">Angular</label>
+                <input type="checkbox" name="technicalcourses" id="course3" value="react">
+                <label  class="courselabel" for="course3">React</label>
+            </td>
+        </tr>
+     
+        
+       <!--  <br><br>
+          <label for="joindate">Enter joining date</label><input type="date" id="joindate"><br><br>
+        <label>Select Gender</label>
+        <input type="radio" name="gender" id="gender1" value="male"><label for="gender1">MALE</label>
+        <input type="radio" name="gender"  id="gender2" value="female"><label for="gender2">FEMALE</label> <br><br>
+        <label for="department">Select Department</label>
+        <select id="department" required>
+            <option value="ld">Learning and Development</option>
+            <option value="php">PHP</option>
+            <option value="js"> Javascript</option>
+            <option value="js">Data Science</option>
+        </select><br><br> -->
+        <tr>
+           <td> <label for="pass">Set Password:</label></td>
+            <td><input type="text" id="pass"  required pattern="(?=.*\d.*)(?=.*[a-zA-Z].*)(?=.*[@!#\$%&\?].*).{5,10}"></td>
+        </tr>
+        <tr class="errorBlock">
+            <td></td><td><span id="error6"></span></td>
+        </tr>
+        <tr>
+            <td><label for="cpass">Confirm Password:</label></td>
+            <td><input type="text" id="cpass"></td>
+        </tr>
+        <tr class="errorBlock">
+            <td></td><td><span id="error7"></span></td>
+        </tr>
+        <tr>
+            <td id="buttons" colspan="2"><input type="submit" value="ENROLL"> <input type="reset" value="RESET"></td>
+        </tr>
+    </table>
+    </form>
+</article>
+<script src="./Scripts/jquery-3.7.1.min.js"></script>
+<script src="ValidationDemo.js"></script>
+</body>
+
+</html>
